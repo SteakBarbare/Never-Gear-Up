@@ -1,82 +1,82 @@
 
 Character Concept.png
-size: 256,32
+size: 128,32
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 Armor
   rotate: false
-  xy: 2, 5
+  xy: 0, 7
   size: 26, 25
   orig: 26, 25
   offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 73, 14
+  xy: 65, 16
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 Left Arm
   rotate: true
-  xy: 117, 19
+  xy: 26, 0
   size: 11, 23
   orig: 11, 23
   offset: 0, 0
   index: -1
 Left Foot
   rotate: true
-  xy: 142, 20
+  xy: 83, 6
   size: 10, 20
   orig: 10, 20
   offset: 0, 0
   index: -1
 Left Hand
   rotate: true
-  xy: 117, 2
+  xy: 105, 17
   size: 15, 19
   orig: 15, 19
   offset: 0, 0
   index: -1
 Left Leg
   rotate: true
-  xy: 95, 14
+  xy: 85, 16
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 Right Arm
   rotate: false
-  xy: 138, 2
+  xy: 49, 3
   size: 15, 15
   orig: 15, 15
   offset: 0, 0
   index: -1
 Right Foot
   rotate: false
-  xy: 30, 9
+  xy: 26, 11
   size: 16, 21
   orig: 16, 21
   offset: 0, 0
   index: -1
 Right Hand
   rotate: true
-  xy: 48, 16
+  xy: 42, 18
   size: 14, 23
   orig: 14, 23
   offset: 0, 0
   index: -1
 Right Leg
   rotate: true
-  xy: 164, 17
+  xy: 64, 3
   size: 13, 19
   orig: 13, 19
   offset: 0, 0
   index: -1
 Waist
   rotate: false
-  xy: 155, 2
+  xy: 105, 4
   size: 14, 13
   orig: 14, 13
   offset: 0, 0

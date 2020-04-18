@@ -1,5 +1,5 @@
 var baseW = 640;
-var baseH = 360;
+var baseH = 320;
 
 // Get the game aspect ratio
 var aspect = baseW / baseH ;
