@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "76f6f5d7-e458-421e-b377-9adf9a9048a3",
+            "Value": {
+                "id": "88fd7592-ec7c-45de-a603-b6db5c3c6e3f",
+                "resourcePath": "sprites\\sprPjSpine\\sprPjSpine.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "78d1fc6f-9eff-4947-a7c4-20af040fd1c0",
             "Value": {
                 "id": "e01c1dc1-2923-4c34-b8c7-2c7c87071d37",

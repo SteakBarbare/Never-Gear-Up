@@ -3,7 +3,8 @@
         "Value": 4278190080
     },
     "option_gameguid": "055980d8-f397-4666-9d64-8cd697f6fd9b",
-    "option_game_speed": 60
+    "option_game_speed": 60,
+    "option_spine_licence": true
 }←be5f1418-b31b-48af-a023-f04cdf6e5121|{
     "textureGroups": {
         "Additions": [
