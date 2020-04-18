@@ -1,5 +1,5 @@
 # Never-Gear-Up
- A robot fighting game where you have to keep your machine alive
+ A robot fighting game where you have to keep your machine alive for the Ludum Dare 46 (made in 72h)
  
  ## How to contribuate
  - First create a new branch to work on
