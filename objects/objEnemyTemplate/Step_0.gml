@@ -1,20 +1,26 @@
 if(instance_exists(objFriendlyTemplate))
 {
-	
-	if(turnTimer >= turnMaxTimer)
+	if(win == false && robotLife > 0)
 	{
 	
-	isActive = true;
-	turnTimer = 0;
-	//Attack
-	isActive = false;
+		if(turnTimer >= turnMaxTimer)
+		{
+	
+			isActive = true;
+			Turn(objEnemyTemplate, objFriendlyTemplate);
+			isActive = false;
 	
 	
-	}
+		}
 	
-	else if(objFriendlyTemplate.isActive = false)
-	{
+		else if(objFriendlyTemplate.isActive = false)
+		{
 		
-		turnTimer = turnTimer + robotSpeed;
+			turnTimer = turnTimer + robotSpeed;
+		}
+	}
+	else if (robotLife <= 0)
+	{
+		objFriendlyTemplate.win = true;
 	}
 }

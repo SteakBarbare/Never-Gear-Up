@@ -8,24 +8,34 @@ var activeRobot, opponent;
 activeRobot = argument[0];
 opponent = argument [1];
 
-activeRobot.timer = 0;
+activeRobot.turnTimer = irandom(robotSpeed);
 
 targetPart = irandom(6);
-
-if(opponent.robotLifePart[targetPart] > 0)
+Dodge = irandom(100);
+if(Dodge > opponent.robotDodge)
 {
-	opponent.robotLifePart[targetPart] -= activeRobot.damage;
-	opponent.robotLife -= activeRobot.damage;
+	if(opponent.robotLifePart[targetPart] > 0)
+	{
+		opponent.robotLifePart[targetPart] -= activeRobot.robotDamage;
+		opponent.robotLife -= activeRobot.robotDamage;
+	}
+
+	else 
+	{
+		opponent.robotLife -= activeRobot.robotDamage * 1.5;
+	}
+
+	if(activeRobot.x < 320)
+	{
+		activeRobot.x++;	
+	}
+	else
+	{
+		activeRobot.x--;	
+	}
 }
-else 
-{
-	opponent.robotLife -= activeRobot.damage * 1.5;
-}
 
-activeRobot.x + 10;
-
-return 
-
+return activeRobot-opponent; 
 
 
 
