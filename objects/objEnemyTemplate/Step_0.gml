@@ -7,7 +7,7 @@ if(instance_exists(objFriendlyTemplate))
 		{
 	
 			isActive = true;
-			var opponentRobot = instance_find(objEnemyTemplate, 0).id;
+			var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
 			var thisRobot = id;
 			scrRobotTurn(thisRobot, opponentRobot);
 			isActive = false;

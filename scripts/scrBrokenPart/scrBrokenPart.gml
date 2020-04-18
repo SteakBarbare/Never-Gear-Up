@@ -1,9 +1,10 @@
-/// @function			broke;
-/// @param  {object}	robot				PJ or Ennemies
-/// @param  {int}		robotPartBroke      Indicate which part need modification
-/// @description		set the stats modifier due to broken parts
+/// @function          broke;
+/// @param  {object}   robot       PJ or Ennemies
+/// @param  {int}   robotPartBroke       Indicate which part need modification
+/// @description       set the stats modifier due to broken parts
 
 var robot = argument[0];
+
 var part = argument[1];
 
 switch(part)
@@ -14,9 +15,9 @@ switch(part)
 			robot.robotPart[0, 0] = 0;
 			robot.robotPart[0, 1] = "empty";
 			
-			//robot.robotDamage -= robot.robotPart[0, 2] // remove bonus or malus
+			//robot.robotDamage -= robot.robotPart[0, 2]; // remove bonus or malus
 			robot.robotPart[0, 2] = -1;
-			//robot.robotDamage -= robot.robotPart[0, 2] // add broken part malus
+			//robot.robotDamage -= robot.robotPart[0, 2]; // add broken part malus
 			
 		
 		//Body	
@@ -55,12 +56,12 @@ switch(part)
 			robot.robotPart[4, 2] = -1;
 			robot.robotSpeed -= robot.robotPart[4, 2]; // add broken part malus
 			
-		//leftLeg
+		//rightLeg
 		case 5:
 			robot.robotPart[5, 0] = 0;
 			robot.robotPart[5, 1] = "empty";
 			
-			//robot.robotSpeed -= robot.robotPart[5, 2] // remove bonus or malus
+			//robot.robotSpeed -= robot.robotPart[5, 2]; // remove bonus or malus
 			robot.robotPart[5, 2] = -1;
 			//robot.robotSpeed -= robot.robotPart[5, 2] // add broken part malus
 		
