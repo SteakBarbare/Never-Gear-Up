@@ -8,6 +8,9 @@ xOriginal = x;
 
 damage = false;
 
+dice = 0;
+
+animationSet = false;
 //isDashing
 dash = false;
 hsp = 0;
