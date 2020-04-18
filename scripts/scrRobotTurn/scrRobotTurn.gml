@@ -1,4 +1,4 @@
-/// @function          turn;
+/// @function          srcRobotTurn;
 /// @param  {object}   activeRobotTurn        PJ or Ennemies
 /// @param  {object}   opponent      PJ or Ennemies
 /// @description       entire turn execution
