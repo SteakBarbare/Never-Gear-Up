@@ -9,6 +9,9 @@ Dash = false;
 v = 0;
 animTime = 0;
 
+//pause
+combat = false;
+
 //Life Parts --- 0 = life
 
 robotPart[0, 0] = 20; // Head

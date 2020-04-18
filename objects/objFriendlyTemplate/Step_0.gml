@@ -1,10 +1,23 @@
+if(keyboard_check_released(vk_space))
+{
+   if(!combat)
+   {
+	   combat = true;
+   }
+   else
+   {
+	   combat = false;
+   }
+}
+if(combat)
+{
 var opponentRobot = instance_find(objEnemyTemplate, 0).id;
 var thisRobot = id;
-if(instance_exists(objEnemyTemplate) && opponentRobot.Dash == false)
+if(instance_exists(objEnemyTemplate) && !opponentRobot.Dash)
 {
-	if(Dash == false)
+	if(!Dash)
 	{
-		if(win == false && robotLife > 0)
+		if(!win && robotLife > 0)
 		{
 	
 			if(turnTimer >= turnMaxTimer)
@@ -19,7 +32,7 @@ if(instance_exists(objEnemyTemplate) && opponentRobot.Dash == false)
 		
 			}
 	
-			else if(opponentRobot.isActive = false || opponentRobot.Dash == false)
+			else if(!opponentRobot.isActive || !opponentRobot.Dash)
 			{
 		
 				turnTimer = turnTimer + robotSpeed;
@@ -43,6 +56,8 @@ if(instance_exists(objEnemyTemplate) && opponentRobot.Dash == false)
 		{
 			v = 0;
 			x = x - (1 +  v);
+			opponentRobot.x +=20;
+			scrRobotTurn(thisRobot, opponentRobot);
 			animTime++;
 			v += 0.05;
 		}
@@ -57,8 +72,9 @@ if(instance_exists(objEnemyTemplate) && opponentRobot.Dash == false)
 	else if(animTime >= 120)
 	{
 		animTime = 0;
+		opponentRobot.x -=20;
 		v = 0;
-	    scrRobotTurn(thisRobot, opponentRobot);
 		Dash = false;
 	}
+}
 }

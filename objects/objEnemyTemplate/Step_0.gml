@@ -1,6 +1,20 @@
+if(keyboard_check_released(vk_space))
+{
+   if(!combat)
+   {
+	   combat = true;
+   }
+   else
+   {
+	   combat = false;
+   }
+}
+
 var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
 var thisRobot = id;
-if(instance_exists(objFriendlyTemplate) && opponentRobot.Dash == false)
+if(combat)
+{
+if(instance_exists(objFriendlyTemplate) && !opponentRobot.Dash)
 {
 	if(Dash == false)
 	{
@@ -19,7 +33,7 @@ if(instance_exists(objFriendlyTemplate) && opponentRobot.Dash == false)
 		
 			}
 	
-			else if(opponentRobot.isActive = false || opponentRobot.Dash == false)
+			else if(!opponentRobot.isActive || !opponentRobot.Dash)
 			{
 		
 				turnTimer = turnTimer + robotSpeed;
@@ -43,6 +57,8 @@ if(instance_exists(objFriendlyTemplate) && opponentRobot.Dash == false)
 		{
 			v = 0;
 			x = x + (1 +  v);
+			scrRobotTurn(thisRobot, opponentRobot);
+			opponentRobot.x -=20;
 			animTime++;
 			v += 0.05;
 		}
@@ -58,7 +74,8 @@ if(instance_exists(objFriendlyTemplate) && opponentRobot.Dash == false)
 	{
 		animTime = 0;
 		v = 0;
-	    scrRobotTurn(thisRobot, opponentRobot);
+		opponentRobot.x +=20;
 		Dash = false;
 	}
+}
 }
