@@ -1,10 +1,20 @@
-if(isActive && turnTimer < turnMaxTimer && instance_exists(objFriendlyTemplate))
+if(instance_exists(objFriendlyTemplate))
 {
-	turnTimer++;
 	
-}
-else
-{
+	if(turnTimer >= turnMaxTimer)
+	{
+	
+	isActive = true;
+	turnTimer = 0;
+	//Attack
 	isActive = false;
-	objFriendlyTemplate.isActive = true;
+	
+	
+	}
+	
+	else if(objFriendlyTemplate.isActive = false)
+	{
+		
+		turnTimer = turnTimer + robotSpeed;
+	}
 }

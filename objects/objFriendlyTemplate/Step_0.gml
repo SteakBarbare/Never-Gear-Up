@@ -1,9 +1,19 @@
-if(isActive && turnTimer < turnMaxTimer && instance_exists(objEnemyTemplate))
+if(instance_exists(objEnemyTemplate))
 {
-	turnTimer++;
-}
-else
-{
+	
+	if(turnTimer >= turnMaxTimer)
+	{
+	
+	isActive = true;
+	turnTimer = 0;
+	//Attack
 	isActive = false;
-	objEnemyTemplate.isActive = true;
+	
+	}
+	
+	else if(objEnemyTemplate.isActive = false)
+	{
+		
+		turnTimer = turnTimer + robotSpeed;
+	}
 }
