@@ -7,7 +7,7 @@ if(instance_exists(objFriendlyTemplate))
 		{
 	
 			isActive = true;
-			Turn(objEnemyTemplate, objFriendlyTemplate);
+			scrRobotTurn(objEnemyTemplate, objFriendlyTemplate);
 			isActive = false;
 	
 	
@@ -22,5 +22,6 @@ if(instance_exists(objFriendlyTemplate))
 	else if (robotLife <= 0)
 	{
 		objFriendlyTemplate.win = true;
+		robotLife = 0;
 	}
 }

@@ -10,14 +10,18 @@ opponent = argument [1];
 
 activeRobot.turnTimer = irandom(robotSpeed);
 
-targetPart = irandom(6);
+targetPart = irandom(5);
 Dodge = irandom(100);
 if(Dodge > opponent.robotDodge)
 {
-	if(opponent.robotLifePart[targetPart] > 0)
+	if(opponent.robotPart[targetPart, 0] > 0)
 	{
-		opponent.robotLifePart[targetPart] -= activeRobot.robotDamage;
+		opponent.robotPart[targetPart, 0] -= activeRobot.robotDamage;
 		opponent.robotLife -= activeRobot.robotDamage;
+		if(opponent.robotPart[targetPart, 0] <= 0)
+		{
+			scrBrokenPart(opponent, targetPart);
+		}
 	}
 
 	else 
@@ -27,11 +31,11 @@ if(Dodge > opponent.robotDodge)
 
 	if(activeRobot.x < 320)
 	{
-		activeRobot.x++;	
+		activeRobot.x+=10;	
 	}
 	else
 	{
-		activeRobot.x--;	
+		activeRobot.x-=10;	
 	}
 }
 

@@ -1,18 +1,18 @@
 //Globals Stats
 robotLife = 100;
-robotSpeed = 20;
-robotDodge = 5;
-robotDamage = 10;
+robotSpeed = 5;
+robotDodge = 15;
+robotDamage = 15;
 
-//Parts Life
-robotLifePart = [];
-robotLifePart[0] = 20; // Head
-robotLifePart[1] = 20; // Body
-robotLifePart[2] = 20; // rightArm
-robotLifePart[3] = 20; // leftArm
-robotLifePart[4] = 20; // leftRight
-robotLifePart[5] = 20; // rightLeg
-robotLifePart[6] = 20; // leftLeg
+//Life Parts --- 0 = life
+
+robotPart[0, 0] = 20; // Head
+robotPart[1, 0] = 20; // Body
+robotPart[2, 0] = 20; // rightArm
+robotPart[3, 0] = 20; // leftArm
+robotPart[4, 0] = 20; // rightLeg
+robotPart[5, 0] = 20; // leftLeg
+
 
 //Turn Var
 turnMaxTimer = room_speed * 3;
