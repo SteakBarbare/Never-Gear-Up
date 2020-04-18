@@ -4,9 +4,13 @@ robotSpeed = 3;
 robotDodge = 0;
 robotDamage = 20;
 
+xOriginal = x;
+
+damage = false;
+
 //isDashing
 dash = false;
-v = 0;
+hsp = 0;
 animTime = 0;
 
 //pause

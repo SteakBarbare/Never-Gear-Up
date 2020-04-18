@@ -49,23 +49,23 @@ if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 	{
 		if(animTime < 30)
 		{	
-			x = x - (3 + v);
-			v += 0.250
+			x = x - (3 + hsp);
+			hsp += 0.250
 			animTime++;
 		}
 		else if (animTime == 30)
 		{
-			v = 0;
-			x = x + (3 +  v);
+			hsp = 0;
+			x = x + (3 +  hsp);
 			opponentRobot.x -=20;
 			scrRobotTurn(thisRobot, opponentRobot);
 			animTime++;
-			v += 0.250;
+			hsp += 0.250;
 		}
 		else if (animTime > 30)
 		{
-			x = x + (3 + v);
-			v += 0.250;
+			x = x + (3 + hsp);
+			hsp += 0.250;
 			animTime++;
 		}
 	
@@ -74,7 +74,7 @@ if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 	{
 		animTime = 0;
 		opponentRobot.x +=20;
-		v = 0;
+		hsp = 0;
 		dash = false;
 	}
 }

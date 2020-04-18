@@ -1,3 +1,7 @@
+var opponentRobot = instance_find(objEnemyTemplate, 0).id;
+var thisRobot = id;
+
+#region Pause
 if(keyboard_check_released(vk_space))
 {
    if(!combat)
@@ -9,72 +13,84 @@ if(keyboard_check_released(vk_space))
 	   combat = false;
    }
 }
+#endregion
+
+#region MortalKombat
 if(combat)
 {
-var opponentRobot = instance_find(objEnemyTemplate, 0).id;
-var thisRobot = id;
-if(instance_exists(objEnemyTemplate) && !opponentRobot.dash)
-{
-	if(!dash)
-	{
-		if(!win && robotLife > 0)
-		{
 	
-			if(turnTimer >= turnMaxTimer)
+	if(instance_exists(objEnemyTemplate) && !opponentRobot.dash)
+	{
+		#region TimerAndWin
+		if(!dash)
+		{
+			if(!win && robotLife > 0)
 			{
 	
-				isActive = true;
+				if(turnTimer >= turnMaxTimer)
+				{
+	
+					isActive = true;
 				
-				dash = true;
+					dash = true;
 			
-				isActive = false;
+					isActive = false;
 	
 		
-			}
+				}
 	
-			else if(!opponentRobot.isActive || !opponentRobot.dash)
+				else if(!opponentRobot.isActive || !opponentRobot.dash)
+				{
+		
+					turnTimer = turnTimer + robotSpeed;
+				}
+			}
+			else if (robotLife <= 0)
 			{
-		
-				turnTimer = turnTimer + robotSpeed;
+				opponentRobot.win = true;
+				robotLife = 0;
 			}
 		}
-		else if (robotLife <= 0)
+		#endregion
+		
+		#region playAttaque
+		else if(dash && image_index < 20 && image_index > 10) //when player is attacking(dash)
 		{
-			opponentRobot.win = true;
-			robotLife = 0;
+			if (image_index > 10 && image_index < 13) //speed when the animation is attacking
+			{
+				x = x + 2 * (1 + hsp);
+				hsp += 0.8; //hsp = horizontal speed
+			}
+			else if (image_index < 14) 
+			{
+				x = x +  2 * (1 + hsp);
+				hsp += 0.9;
+			}
+			else if(image_index < 16) //return start
+			{
+				hsp = 0;
+				if(!damage) //prevent from attacking multiple times
+				{
+					scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
+					damage = true;
+				}
+			}
+			else if(image_index < 19 && x > xOriginal) //return to original position
+			{
+				x-= 12;
+			}
+			else if(image_index >= 19)
+			{
+				x = xOriginal; //replace the player robots
+				opponentRobot.x -=10; //replace the opponant
+				hsp = 0; 
+				dash = false; //end attack phase
+				damage = false; //prevent from attacking multiple times
+			}
+			
 		}
-	}
-	else if(dash && animTime < 60)
-	{
-		if(animTime < 30)
-		{	
-			x = x + (3 + v);
-			v += 0.250
-			animTime++;
-		}
-		else if (animTime == 30)
-		{
-			v = 0;
-			x = x - (3 +  v);
-			opponentRobot.x +=20;
-			scrRobotTurn(thisRobot, opponentRobot);
-			animTime++;
-			v += 0.250;
-		}
-		else if (animTime > 30)
-		{
-			x = x - (3 + v);
-			v += 0.250;
-			animTime++;
-		}
-	
-	}
-	else if(animTime >= 60)
-	{
-		animTime = 0;
-		opponentRobot.x -=20;
-		v = 0;
-		dash = false;
+		#endregion
+		
 	}
 }
-}
+#endregion
