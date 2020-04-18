@@ -5,7 +5,7 @@ robotDodge = 0;
 robotDamage = 20;
 
 //isDashing
-Dash = false;
+dash = false;
 v = 0;
 animTime = 0;
 
