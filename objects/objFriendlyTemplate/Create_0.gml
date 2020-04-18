@@ -14,6 +14,6 @@ robotLifeRightLeg = 100;
 
 //Turn Var
 turnMaxTimer = room_speed * 3;
-turnTimer = 0;
+turnTimer = irandom_range(60, 150);
 isActive= true;
 
