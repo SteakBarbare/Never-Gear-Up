@@ -1,29 +1,64 @@
-if(instance_exists(objEnemyTemplate))
+var opponentRobot = instance_find(objEnemyTemplate, 0).id;
+var thisRobot = id;
+if(instance_exists(objEnemyTemplate) && opponentRobot.Dash == false)
 {
-	if(win == false && robotLife > 0)
+	if(Dash == false)
 	{
-	
-		if(turnTimer >= turnMaxTimer)
+		if(win == false && robotLife > 0)
 		{
 	
-			isActive = true;
-			var opponentRobot = instance_find(objEnemyTemplate, 0).id;
-			var thisRobot = id;
-			scrRobotTurn(thisRobot, opponentRobot);
-			isActive = false;
+			if(turnTimer >= turnMaxTimer)
+			{
 	
+				isActive = true;
+				
+				Dash = true;
+			
+				isActive = false;
 	
-		}
-	
-		else if(objEnemyTemplate.isActive = false)
-		{
 		
-			turnTimer = turnTimer + robotSpeed;
+			}
+	
+			else if(opponentRobot.isActive = false || opponentRobot.Dash == false)
+			{
+		
+				turnTimer = turnTimer + robotSpeed;
+			}
+		}
+		else if (robotLife <= 0)
+		{
+			opponentRobot.win = true;
+			robotLife = 0;
 		}
 	}
-	else if (robotLife <= 0)
+	else if(Dash && animTime < 120)
 	{
-		objEnemyTemplate.win = true;
-		robotLife = 0;
+		if(animTime < 60)
+		{	
+			x = x + (1 + v);
+			v += 0.05;
+			animTime++;
+		}
+		else if (animTime == 60)
+		{
+			v = 0;
+			x = x - (1 +  v);
+			animTime++;
+			v += 0.05;
+		}
+		else if (animTime > 60)
+		{
+			x = x - (1 + v);
+			v += 0.05;
+			animTime++;
+		}
+	
+	}
+	else if(animTime >= 120)
+	{
+		animTime = 0;
+		v = 0;
+	    scrRobotTurn(thisRobot, opponentRobot);
+		Dash = false;
 	}
 }

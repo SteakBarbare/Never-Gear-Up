@@ -2,7 +2,12 @@
 robotLife = 100;
 robotSpeed = 5;
 robotDodge = 15;
-robotDamage = 15;
+robotDamage = 10;
+
+//isDashing
+Dash = false;
+v = 0;
+animTime = 0;
 
 //Life Parts --- 0 = life
 

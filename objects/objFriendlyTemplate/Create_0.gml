@@ -1,8 +1,13 @@
 //Globals Stats
 robotLife = 100;
-robotSpeed = 5;
+robotSpeed = 3;
 robotDodge = 0;
-robotDamage = 15;
+robotDamage = 20;
+
+//isDashing
+Dash = false;
+v = 0;
+animTime = 0;
 
 //Life Parts --- 0 = life
 
