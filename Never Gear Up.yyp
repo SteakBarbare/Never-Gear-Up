@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "04ac4a15-2a6b-44d4-a55a-95a03138fbba",
+            "Value": {
+                "id": "8c218c13-52a2-47b3-ace6-c8857582f481",
+                "resourcePath": "views\\04ac4a15-2a6b-44d4-a55a-95a03138fbba.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "097f6fa5-4921-4695-9f2d-29cb47996931",
             "Value": {
                 "id": "62327f19-13cf-4a1e-af8b-2e4e071f8bc6",
@@ -60,6 +68,14 @@
                 "id": "5c756ea9-a899-4e54-8695-49807a694336",
                 "resourcePath": "sprites\\sprEnemyTemplate\\sprEnemyTemplate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "13bd6aa5-dd7c-4a6b-8ec7-51c3b79e1cae",
+            "Value": {
+                "id": "c8d75cf8-038e-4d3d-826b-ed41419c9008",
+                "resourcePath": "scripts\\srcSpineChangeAnim\\srcSpineChangeAnim.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -393,7 +409,8 @@
     ],
     "script_order": [
         "dae54ea3-16ce-45e8-a041-0ee22aaa8c29",
-        "92252cc2-e421-45a0-bfd9-b65f8da6c733"
+        "92252cc2-e421-45a0-bfd9-b65f8da6c733",
+        "13bd6aa5-dd7c-4a6b-8ec7-51c3b79e1cae"
     ],
     "tutorial": ""
 }

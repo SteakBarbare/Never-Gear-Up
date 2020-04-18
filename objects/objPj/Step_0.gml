@@ -2,9 +2,9 @@ event_inherited();
 
 if(!dash)
 {
-	skeleton_animation_set("Idle");
+	srcSpineChangeAnim(skeleton_animation_get(), "Idle");
 }
 else
 {
-	skeleton_animation_set("Attack Left");
+	srcSpineChangeAnim(skeleton_animation_get(), "Attack Left");
 }
