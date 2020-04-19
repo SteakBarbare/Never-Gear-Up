@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "b9ea10ef-b142-4921-957b-622682631710",
+            "Value": {
+                "id": "132a616b-551a-4f65-87c3-1ddbc7d547c4",
+                "resourcePath": "fonts\\Arial\\Arial.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "bf718444-4177-4048-8f1d-6e5ef2147c6d",
             "Value": {
                 "id": "bba2bde6-01c0-4998-a2e1-ea652c71397a",

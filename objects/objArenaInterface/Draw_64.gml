@@ -1,5 +1,5 @@
 // Change the slots accordingly to the state of each parts
-
+draw_set_font(Arial);
 if(instance_exists(objPj))
 {
 	
@@ -29,13 +29,17 @@ if(instance_exists(objPj))
 
 	draw_text(60, 255, playerRobot.robotPart[0, 1]); //Body
 
-	draw_text(92, 255, objPj.robotPart[0, 2]); //RightArm
+	draw_text(92, 255,  playerRobot.robotPart[0, 2]); //RightArm
 
-	draw_text(30, 255, objPj.robotPart[0, 3]); //leftArm
+	draw_text(30, 255,  playerRobot.robotPart[0, 3]); //leftArm
 
-	draw_text(48, 295, objPj.robotPart[0, 4]); //RightLeg
+	draw_text(48, 295,  playerRobot.robotPart[0, 4]); //RightLeg
 
-	draw_text(72, 295, objPj.robotPart[0, 5]); //LeftLeg
+	draw_text(72, 295,  playerRobot.robotPart[0, 5]); //LeftLeg
+	
+	//draw stats
+	var colorGreen = make_color_rgb(90, 255, 90);
+	draw_text_transformed_color(150, 215, "Robot HP:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 }
 
 if(instance_exists(objEnemy))
@@ -49,3 +53,4 @@ if(instance_exists(objEnemy))
 
 
 }
+draw_set_font(-1)
