@@ -10,7 +10,7 @@ var dice = 0;
 for(compteur = 0; compteur < 6; compteur++)
 {
 	
-	dice = irandom_range(0, 100);
+	dice = irandom_range(90, 100);
 	
 	
 	switch(compteur)

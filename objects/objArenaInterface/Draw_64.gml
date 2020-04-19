@@ -37,9 +37,49 @@ if(instance_exists(objPj))
 
 	draw_text(72, 295,  playerRobot.robotPart[0, 5]); //LeftLeg
 	
-	//draw stats
+	//color stats
 	var colorGreen = make_color_rgb(90, 255, 90);
-	draw_text_transformed_color(150, 215, "Robot HP:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	var colorOrange = make_color_rgb(255, 150, 0);
+	var colorRed = make_color_rgb(255, 50, 50);
+	
+	//fixed life
+	draw_text_transformed_color(150, 215, "HP:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 215, " / " + string(playerRobot.robotLifeMax), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	
+	//life stats
+	if(playerRobot.robotNewLife < playerRobot.robotLifeMax/4)
+	{
+		var c_life = colorRed;
+	}
+	else if(playerRobot.robotNewLife < playerRobot.robotLifeMax/2)
+	{
+		var c_life = colorOrange;
+	}
+	else
+	{
+		var c_life = colorGreen;
+	}
+	draw_text_transformed_color(196, 215, int64(playerRobot.robotNewLife), 0.6, 0.6, 0, c_life, c_life, c_life, c_life, 1);
+	
+	//fixed Damage
+	draw_text_transformed_color(150, 225, "Damage:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 225, " / " + string(iniRobotDamage), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	
+	//life stats
+	if(playerRobot.robotNewLife < playerRobot.robotLifeMax/4)
+	{
+		var c_life = colorRed;
+	}
+	else if(playerRobot.robotNewLife < playerRobot.robotLifeMax/2)
+	{
+		var c_life = colorOrange;
+	}
+	else
+	{
+		var c_life = colorGreen;
+	}
+	//draw_text_transformed_color(196, 215, int64(playerRobot.robotNewLife), 0.6, 0.6, 0, c_life, c_life, c_life, c_life, 1);
+	
 }
 
 if(instance_exists(objEnemy))
