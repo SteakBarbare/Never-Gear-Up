@@ -14,14 +14,13 @@ targetPart = irandom(5);
 Dodge = irandom(100);
 if(Dodge > opponent.robotDodge)
 {
-	if(opponent.robotPart[targetPart, 0] > 0)
+	if(opponent.robotPart[0, targetPart] > 0)
 	{
-		opponent.robotPart[targetPart, 0] -= activeRobot.robotDamage;
+		opponent.robotPart[0, targetPart] -= activeRobot.robotDamage;
 		opponent.robotLife -= activeRobot.robotDamage;
-		if(opponent.robotPart[targetPart, 0] <= 0)
+		if(opponent.robotPart[0, targetPart] <= 0)
 		{
 			scrBrokenPart(opponent, targetPart);
-			opponent.robotPart[targetPart, 0] = 0;
 		}
 	}
 

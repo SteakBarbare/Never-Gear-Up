@@ -1,3 +1,6 @@
+// Change the slots accordingly to the state of each parts
+srcSpineSetSlots(robotPart);
+
 draw_self();
 if(robotLife <= 0)
 {
@@ -22,12 +25,12 @@ draw_healthbar(121, 46, 220, 31, (robotLife/robotLifeMax)*100, c_black, c_red, c
 
 draw_text(60, 240, robotPart[0, 0]); //Head
 
-draw_text(60, 280, robotPart[1, 0]); //Body
+draw_text(60, 280, robotPart[0, 1]); //Body
 
-draw_text(92, 280, robotPart[2, 0]); //RightArm
+draw_text(92, 280, robotPart[0, 2]); //RightArm
 
-draw_text(30, 280, robotPart[3, 0]); //leftArm
+draw_text(30, 280, robotPart[0, 3]); //leftArm
 
-draw_text(48, 320, robotPart[4, 0]); //RightLeg
+draw_text(48, 320, robotPart[0, 4]); //RightLeg
 
-draw_text(72, 320, robotPart[5, 0]); //LeftLeg
+draw_text(72, 320, robotPart[0, 5]); //LeftLeg

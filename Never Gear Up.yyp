@@ -103,14 +103,6 @@
             }
         },
         {
-            "Key": "18fff3d9-1d4a-4fe6-9448-a24d81553ea8",
-            "Value": {
-                "id": "0e17e0e8-95f0-49b3-a3a0-73421172b59b",
-                "resourcePath": "sprites\\objPjSprites\\objPjSprites.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "19a3181c-2489-4bf9-8739-a1edb09a45d0",
             "Value": {
                 "id": "927735d0-13bb-497e-998f-d078b0b49add",
@@ -287,6 +279,14 @@
             }
         },
         {
+            "Key": "76501994-6bb8-486d-9840-3a79eeb8917c",
+            "Value": {
+                "id": "25dfaaec-9221-43e2-9a36-63f3410cf5c1",
+                "resourcePath": "scripts\\srcSpineSetSlots\\srcSpineSetSlots.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "78d1fc6f-9eff-4947-a7c4-20af040fd1c0",
             "Value": {
                 "id": "e01c1dc1-2923-4c34-b8c7-2c7c87071d37",
@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "f0e0ee84-2735-44f9-bfb9-90e1cbba0ecc",
+            "Value": {
+                "id": "86ecc108-dee2-4a33-9e1d-cd2e5db81430",
+                "resourcePath": "scripts\\srcSpineChangeAttachment\\srcSpineChangeAttachment.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "92b4cdad-547d-4e13-bca8-b07a05a841f4",
@@ -482,7 +490,9 @@
     "script_order": [
         "dae54ea3-16ce-45e8-a041-0ee22aaa8c29",
         "92252cc2-e421-45a0-bfd9-b65f8da6c733",
-        "13bd6aa5-dd7c-4a6b-8ec7-51c3b79e1cae"
+        "13bd6aa5-dd7c-4a6b-8ec7-51c3b79e1cae",
+        "76501994-6bb8-486d-9840-3a79eeb8917c",
+        "f0e0ee84-2735-44f9-bfb9-90e1cbba0ecc"
     ],
     "tutorial": ""
 }
