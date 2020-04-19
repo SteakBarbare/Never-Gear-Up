@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "5569d995-fd38-4351-abca-c61910990f4d",
+            "Value": {
+                "id": "e2bd6e26-0380-419d-a85a-77037a6a432f",
+                "resourcePath": "sounds\\Damage1\\Damage1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "600f8af8-5e3d-4b1b-b3f0-c0d61bf45e38",
             "Value": {
                 "id": "e952741e-c099-418c-a3ca-fdb315be201e",
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "a7932734-58e0-4fbd-a80a-9d3b7246f535",
+            "Value": {
+                "id": "ee56759c-3e99-4379-b049-f3b4d52e5c6f",
+                "resourcePath": "sounds\\Damage3\\Damage3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a810652f-3f2c-4600-bcf3-abddc09821e3",
             "Value": {
                 "id": "05ed4287-04ff-42d4-b7f0-b3b2a2d14878",
@@ -500,6 +516,14 @@
                 "id": "92b4cdad-547d-4e13-bca8-b07a05a841f4",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f5ed7618-5bb6-4691-a615-bb3fd7273153",
+            "Value": {
+                "id": "b99f20a9-3ad1-4cd1-9c7e-c20323a9e3a5",
+                "resourcePath": "sounds\\Damage2\\Damage2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
