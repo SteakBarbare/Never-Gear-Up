@@ -17,6 +17,8 @@ damage = false;
 
 dice = 0;
 
+haveDodge = false;
+
 stagMove = false;
 
 animationSet = false;

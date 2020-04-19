@@ -38,6 +38,10 @@ if(Dodge > opponent.robotDodge)
 
 	
 }
+else
+{
+	opponent.haveDodge = true;	
+}
 
 return activeRobot-opponent; 
 

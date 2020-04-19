@@ -17,17 +17,35 @@ if(!dead)
 {
 	if(!dash)
 	{
-		image_speed = 1;
-		if(opponentRobot.dash && opponentRobot.image_index > 12)
+		if(haveDodge)
 		{
-			image_speed = 1.3;
-			srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
+			image_speed = 1;
+			if(opponentRobot.dash)
+			{
+				image_speed = 1;
+				srcSpineChangeAnim(skeleton_animation_get(), "Defense");
 			
+			}
+			else
+			{
+				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+				animationSet = false;
+			}
 		}
 		else
 		{
-			srcSpineChangeAnim(skeleton_animation_get(), "Idle");
-			animationSet = false;
+			image_speed = 1;
+			if(opponentRobot.dash && opponentRobot.image_index > 12)
+			{
+				image_speed = 1.3;
+				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
+			
+			}
+			else
+			{
+				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+				animationSet = false;
+			}
 		}
 	}
 	else if(dice == 0)

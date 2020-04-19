@@ -1,7 +1,7 @@
 //Globals Stats
 robotLife = 100;
 robotSpeed = 3;
-robotDodge = 10;
+robotDodge = 99;
 robotDamage = 5;
 dead = false;
 
@@ -19,6 +19,7 @@ dice = 0;
 
 deathSound = false;
 
+haveDodge = false;
 
 
 animationSet = false;
