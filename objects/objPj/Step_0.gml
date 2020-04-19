@@ -40,12 +40,8 @@ if(!dead)
 			image_speed = 1;
 			if(opponentRobot.dash && opponentRobot.image_index > 12)
 			{
-				if(!isBleeding){
-					// Create oil and screws particles
-					part_particles_create(global.particlesSys, x, y-irandom(20), global.oilParticle, irandom_range(20, 35));
-					part_particles_create(global.particlesSys, x, y-irandom(20), global.screwParticle, irandom_range(10, 25));
-					isBleeding = true;
-					flash = 6;
+				if(!fxGenerated){
+					srcParticleCreate("Hit");
 				}
 				image_speed = 1.3;
 				srcSpineSetSlots(robotPart);
@@ -88,5 +84,11 @@ else
 }
 
 if(!opponentRobot.dash){
-	isBleeding = false;
+	fxGenerated = false;
+}
+
+if(skeleton_animation_get() == "Defense"){
+	if(!fxGenerated && image_index > 8){
+		srcParticleCreate("Block");
+	}
 }

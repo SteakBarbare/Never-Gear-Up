@@ -78,5 +78,5 @@ isActive = false;
 win = false;
 
 // Fx Var
-isBleeding = false;
+fxGenerated = false;
 flash = 0;
