@@ -1,8 +1,8 @@
 //Globals Stats
 robotLife = 100;
-robotSpeed = 2;
+robotSpeed = 3;
 robotDodge = 5;
-robotDamage = 50;
+robotDamage = 10;
 
 //activate
 
@@ -22,6 +22,7 @@ animTime = 0;
 
 //pause
 combat = false;
+victorySound = false;
 
 //Life Parts --- 0 = life
 

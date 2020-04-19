@@ -48,6 +48,11 @@ if(activate)
 					opponentRobot.win = true;
 					robotLife = 0;
 				}
+				else if(win && !victorySound)
+				{
+					audio_play_sound(LOSER, 1, false);	
+					victorySound = true;
+				}
 			}
 			else if(dash && animTime < 60)
 			{

@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "19a3181c-2489-4bf9-8739-a1edb09a45d0",
+            "Value": {
+                "id": "927735d0-13bb-497e-998f-d078b0b49add",
+                "resourcePath": "sounds\\LOSER\\LOSER.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1c55b823-32c0-416f-89d7-cdcca484d338",
             "Value": {
                 "id": "701b4173-839b-48b1-bd7a-c311b90aa022",
@@ -303,6 +311,14 @@
             }
         },
         {
+            "Key": "877b12fb-1eac-449c-8445-1f53cc3f9447",
+            "Value": {
+                "id": "a7b7c13e-b29a-4665-9f70-4af0ba3b8d3a",
+                "resourcePath": "sounds\\FIGHT\\FIGHT.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8d9783c1-ce78-42c7-8fff-e3ec39f1277e",
             "Value": {
                 "id": "8634709d-b9d4-49c7-bb11-2ba3a2a722f9",
@@ -324,6 +340,14 @@
                 "id": "5424713d-78e9-4d3d-b8cd-1fd89ef3f378",
                 "resourcePath": "scripts\\scrBrokenPart\\scrBrokenPart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "930bbd56-8ad4-437f-9563-b62dbed3f807",
+            "Value": {
+                "id": "a9bf358e-a944-4f20-b0a2-100e0530e482",
+                "resourcePath": "views\\930bbd56-8ad4-437f-9563-b62dbed3f807.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

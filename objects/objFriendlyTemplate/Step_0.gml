@@ -9,6 +9,7 @@ if(activate)
 	   if(!combat)
 	   {
 		   combat = true;
+		   audio_play_sound(FIGHT, 1, false);
 		   image_speed = 1;
 	   }
 	   else if(!win)
@@ -18,6 +19,7 @@ if(activate)
 	   }
 	   else if (win)
 	   {
+		    
 			room_goto(Workshop);
 	   }
 	}
@@ -58,6 +60,7 @@ if(activate)
 					opponentRobot.win = true;
 					robotLife = 0;
 				}
+				
 			
 			}
 			#endregion
@@ -91,7 +94,6 @@ if(activate)
 				else if(image_index >= 19)
 				{
 					x = xOriginal; //replace the player robots
-					opponentRobot.x -=10; //replace the opponant
 					hsp = 0; 
 					dash = false; //end attack phase
 					damage = false; //prevent from attacking multiple times
