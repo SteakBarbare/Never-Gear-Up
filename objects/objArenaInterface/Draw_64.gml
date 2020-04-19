@@ -43,42 +43,88 @@ if(instance_exists(objPj))
 	var colorRed = make_color_rgb(255, 50, 50);
 	
 	//fixed life
-	draw_text_transformed_color(150, 215, "HP:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
-	draw_text_transformed_color(210, 215, " / " + string(playerRobot.robotLifeMax), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(150, 220, "HP:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 220, " / " + string(playerRobot.robotLifeMax), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 	
 	//life stats
 	if(playerRobot.robotNewLife < playerRobot.robotLifeMax/4)
 	{
-		var c_life = colorRed;
+		var c = colorRed;
 	}
 	else if(playerRobot.robotNewLife < playerRobot.robotLifeMax/2)
 	{
-		var c_life = colorOrange;
+		var c = colorOrange;
 	}
 	else
 	{
-		var c_life = colorGreen;
+		var c = colorGreen;
 	}
-	draw_text_transformed_color(196, 215, int64(playerRobot.robotNewLife), 0.6, 0.6, 0, c_life, c_life, c_life, c_life, 1);
+	draw_text_transformed_color(196, 220, int64(playerRobot.robotNewLife), 0.6, 0.6, 0, c, c, c, c, 1);
+	
+	
 	
 	//fixed Damage
-	draw_text_transformed_color(150, 225, "Damage:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
-	draw_text_transformed_color(210, 225, " / " + string(iniRobotDamage), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(150, 245, "Damage:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 245, " / " + string(iniRobotDamage), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 	
-	//life stats
-	if(playerRobot.robotNewLife < playerRobot.robotLifeMax/4)
+	//Damage stats
+	if(playerRobot.robotDamage <= iniRobotDamage/4)
 	{
-		var c_life = colorRed;
+		var c = colorRed;
 	}
-	else if(playerRobot.robotNewLife < playerRobot.robotLifeMax/2)
+	else if(playerRobot.robotDamage <= iniRobotDamage/2)
 	{
-		var c_life = colorOrange;
+		var c = colorOrange;
 	}
 	else
 	{
-		var c_life = colorGreen;
+		var c = colorGreen;
 	}
-	//draw_text_transformed_color(196, 215, int64(playerRobot.robotNewLife), 0.6, 0.6, 0, c_life, c_life, c_life, c_life, 1);
+	draw_text_transformed_color(196, 245, int64(playerRobot.robotDamage), 0.6, 0.6, 0, c, c, c, c, 1);
+	
+	//fixed Dodge
+	draw_text_transformed_color(150, 270, "Dodge:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 270, " / " + string(iniRobotDodge), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	
+	//Dodge stats
+	if(playerRobot.robotDodge <= iniRobotDodge/4)
+	{
+		var c = colorRed;
+	}
+	else if(playerRobot.robotDodge <= iniRobotDodge/2)
+	{
+		var c = colorOrange;
+	}
+	else
+	{
+		var c = colorGreen;
+	}
+	draw_text_transformed_color(196, 270, int64(playerRobot.robotDodge), 0.6, 0.6, 0, c, c, c, c, 1);
+	
+	//fixed Speed
+	draw_text_transformed_color(150, 295, "Speed:", 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	draw_text_transformed_color(210, 295, " / " + string(iniRobotSpeed), 0.6, 0.6, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+	
+	//speed stats
+	if(playerRobot.robotDodge <= iniRobotSpeed/4)
+	{
+		var c = colorRed;
+	}
+	else if(playerRobot.robotDodge <= iniRobotSpeed/2)
+	{
+		var c = colorOrange;
+	}
+	else
+	{
+		var c = colorGreen;
+	}
+	draw_text_transformed_color(196, 295, int64(playerRobot.robotSpeed), 0.6, 0.6, 0, c, c, c, c, 1);
+	
+	
+	
+	
+	
+	
 	
 }
 

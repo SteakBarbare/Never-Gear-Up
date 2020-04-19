@@ -4,7 +4,7 @@
 
 robotSpeed = 3;
 robotDodge = 30;
-robotDamage = 20;
+robotDamage = 15;
 dead = false;
 
 
@@ -85,3 +85,6 @@ isBroken = false;
 // Fx Var
 fxGenerated = false;
 flash = 0;
+var thisRobot = instance_find(objPj, 0).id;
+
+scrStatsUpdate(thisRobot)
