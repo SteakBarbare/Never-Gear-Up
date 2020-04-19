@@ -38,3 +38,17 @@ part_type_gravity(global.screwParticle, 0.05, 270);
 
 part_type_life(global.screwParticle, 100, 200);
 #endregion
+
+global.fogParticle = part_type_create();
+
+part_type_shape(global.fogParticle, pt_shape_smoke);
+part_type_size(global.fogParticle, 0.7, 1.3, 0.002, 0);
+part_type_orientation(global.fogParticle, 0, 359, 0, 0, 0);
+part_type_speed(global.fogParticle,-0.2,0.2,0,0);
+part_type_direction(global.fogParticle,0,359,0,0);
+	
+part_type_blend(global.fogParticle, 1);
+part_type_alpha3(global.fogParticle, 0.025, 0.030, 0.035);
+part_type_color3(global.fogParticle, c_white, c_gray, c_dkgray);
+
+part_type_life(global.fogParticle, 400, 600);
