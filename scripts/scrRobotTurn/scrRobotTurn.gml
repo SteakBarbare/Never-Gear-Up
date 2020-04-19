@@ -27,6 +27,7 @@ if(Dodge > opponent.robotDodge)
 		if(opponent.robotPart[0, targetPart] <= 0)
 		{
 			scrBrokenPart(opponent, targetPart);
+			activeRobot.broke = true;
 		}
 		
 	}

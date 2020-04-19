@@ -8,6 +8,7 @@ if(activate)
 	{
 	   if(!combat && !dead)
 	   {
+		   audio_play_sound(FIGHT, 1, false);
 		   combat = true;
 		   image_speed = 1;
 	   }
@@ -52,6 +53,8 @@ if(activate)
 							damage = true;
 							opponentRobot.x -= 2;
 						}
+						
+						
 				
 						dash = true;
 			
@@ -68,6 +71,11 @@ if(activate)
 				}
 				else if (robotLife <= 0)
 				{
+					if(deathSound)
+					{
+						audio_play_sound(LOSER, 1, false);
+						deathSound = false;
+					}
 					opponentRobot.win = true;
 					robotLife = 0;
 				}

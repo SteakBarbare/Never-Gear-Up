@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "01159fa8-a499-4fd0-8dbc-96f1dba14c4c",
+            "Value": {
+                "id": "831f28db-6137-4528-a223-68d334e4b0e5",
+                "resourcePath": "views\\01159fa8-a499-4fd0-8dbc-96f1dba14c4c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "01a67977-d7cc-4afd-ad96-116280bfb035",
             "Value": {
                 "id": "b2251870-97ca-4452-a582-0ed533687e04",
@@ -60,6 +68,14 @@
                 "id": "8c218c13-52a2-47b3-ace6-c8857582f481",
                 "resourcePath": "views\\04ac4a15-2a6b-44d4-a55a-95a03138fbba.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "0560d33c-bb23-418f-8bd3-26081e879ad3",
+            "Value": {
+                "id": "0111337e-9dbd-491a-a8dc-271a7f6c7c0d",
+                "resourcePath": "objects\\objMusicArena\\objMusicArena.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -99,6 +115,14 @@
             "Value": {
                 "id": "6344cc63-fce0-4724-820e-80a372cb05df",
                 "resourcePath": "views\\1417d20f-1c25-448b-a8b3-8b02fb27953b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1757c027-a8a6-4af4-a092-3b70bbe1569f",
+            "Value": {
+                "id": "992dfdbf-eb96-4ea5-9a69-ca08706e0f8c",
+                "resourcePath": "views\\1757c027-a8a6-4af4-a092-3b70bbe1569f.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -436,6 +460,14 @@
                 "id": "57d32c33-3f62-4cda-a036-a4ef0132b103",
                 "resourcePath": "views\\e6b80f06-2be3-4810-9113-f97f28bf1250.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e75711bf-68bc-4fb0-a101-43a73238d024",
+            "Value": {
+                "id": "05c78dd2-eacf-4dc3-b397-d454826d7096",
+                "resourcePath": "sounds\\MusicArena\\MusicArena.yy",
+                "resourceType": "GMSound"
             }
         },
         {

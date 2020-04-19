@@ -4,7 +4,7 @@ robotLifeMax = 100;
 robotLife = robotLifeMax;
 robotSpeed = 3;
 robotDodge = 30;
-robotDamage = 10;
+robotDamage = 20;
 dead = false;
 
 robotNewLife = robotLife;
@@ -23,7 +23,7 @@ damage = false;
 
 dice = 0;
 
-deathSound = false;
+deathSound = true;
 
 haveDodge = false;
 

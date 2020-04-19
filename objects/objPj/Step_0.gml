@@ -41,7 +41,10 @@ if(!dead)
 			if(opponentRobot.dash && opponentRobot.image_index > 12)
 			{
 				image_speed = 1.3;
+				srcSpineSetSlots(robotPart);
 				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
+				
+				
 			
 			}
 			else

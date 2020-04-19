@@ -1,5 +1,4 @@
 // Change the slots accordingly to the state of each parts
-srcSpineSetSlots(robotPart);
 
 draw_self();
 if(robotLife <= 0)
