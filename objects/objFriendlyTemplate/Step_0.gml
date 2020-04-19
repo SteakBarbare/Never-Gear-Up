@@ -109,7 +109,7 @@ if(activate)
 						opponentRobot.robotNewLife = opponentRobot.robotLife;
 						robotNewTimer = turnTimer;
 						update = true;
-						var sound = irandom(2);
+						var sound = irandom(15);
 						switch(sound)
 						{
 							case 0:
@@ -122,6 +122,9 @@ if(activate)
 							
 							case 2:
 							audio_play_sound(Damage3, 1, false);
+							break;
+							
+							default:
 							break;
 							
 						}

@@ -76,4 +76,3 @@ for(var part = 0; part < array_length_2d(robotParts, 1); part++){
 	}
 	
 }
-

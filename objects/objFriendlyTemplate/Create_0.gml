@@ -59,12 +59,12 @@ robotPart[1, 5] = "Default"; // leftLeg
 
 //Parts --- 2 = modifier
 
-robotPart[2, 0] = 0; // Head
-robotPart[2, 1] = 0; // Body
-robotPart[2, 2] = 0; // rightArm
-robotPart[2, 3] = 0; // leftArm
-robotPart[2, 4] = 0; // rightLeg
-robotPart[2, 5] = 0; // leftLeg
+robotPart[2, 0] = 1; // Head
+robotPart[2, 1] = 1; // Body
+robotPart[2, 2] = 1; // rightArm
+robotPart[2, 3] = 1; // leftArm
+robotPart[2, 4] = 1; // rightLeg
+robotPart[2, 5] = 1; // leftLeg
 
 //life calcul
 robotLifeMax = 100 + robotPart[0, 0]/2 + robotPart[0, 1]/2 + robotPart[0, 2]/2 + robotPart[0, 3]/2 + robotPart[0, 4]/2 + robotPart[0, 5]/2;
