@@ -32,6 +32,7 @@ if(activate)
 	#region MortalKombat
 	if(combat)
 	{
+		scrStatsUpdate(thisRobot);
 	
 		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
