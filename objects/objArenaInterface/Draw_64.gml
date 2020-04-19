@@ -1,5 +1,5 @@
 // Change the slots accordingly to the state of each parts
-draw_set_font(Arial);
+draw_set_font(fntBaseFont);
 if(instance_exists(objPj))
 {
 	
