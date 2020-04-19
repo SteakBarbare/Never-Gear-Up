@@ -40,7 +40,39 @@ for(var part = 0; part < array_length_2d(robotParts, 1); part++){
 				
 		}
 		
+	}else{
+		switch(part){
+			case 0:
+				srcSpineChangeAttachment("Head", "Head " + robotParts[1, part]);
+				break;
+				
+			case 1:
+				srcSpineChangeAttachment("Armor", "Armor " + robotParts[1, part]);
+				srcSpineChangeAttachment("Waist", "Waist " + robotParts[1, part]);
+				show_debug_message(robotParts[1, part]);
+				break;
+				
+			case 2:
+				srcSpineChangeAttachment("Right Arm", "Right Arm " + robotParts[1, part]);
+				srcSpineChangeAttachment("Right Hand", "Right Hand " + robotParts[1, part]);
+				break;
+				
+			case 3:
+				srcSpineChangeAttachment("Left Arm", "Left Arm " + robotParts[1, part]);
+				srcSpineChangeAttachment("Left Hand", "Left Hand " + robotParts[1, part]);
+				break;
+				
+			case 4:
+				srcSpineChangeAttachment("Right Leg", "Right Leg " + robotParts[1, part]);
+				srcSpineChangeAttachment("Right Foot", "Right Foot " + robotParts[1, part]);
+				break;
+				
+			case 5:
+				srcSpineChangeAttachment("Left Leg", "Left Leg " + robotParts[1, part]);
+				srcSpineChangeAttachment("Left Foot", "Left Foot " + robotParts[1, part]);
+				break;
+				
+		}
 	}
 	
 }
-

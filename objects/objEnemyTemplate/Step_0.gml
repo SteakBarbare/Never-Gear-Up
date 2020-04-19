@@ -32,6 +32,7 @@ if(activate)
 	#region MortalKombat
 	if(combat)
 	{
+		scrStatsUpdate(thisRobot);
 	
 		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
@@ -50,7 +51,6 @@ if(activate)
 						{
 							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
 							damage = true;
-							opponentRobot.x -= 2;
 						}
 				
 						dash = true;
@@ -138,4 +138,10 @@ if(activate)
 		}
 	}
 	#endregion
+}
+
+if(robotLife / robotLifeMax <= 0.5 && !dead){
+	if(alarm[0] <= -1){
+		alarm[0] = irandom(room_speed*2);
+	}
 }

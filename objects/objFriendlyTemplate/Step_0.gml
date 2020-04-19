@@ -33,9 +33,11 @@ if(activate)
 	#region MortalKombat
 	if(combat)
 	{
+		scrStatsUpdate(thisRobot);
 	
 		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
+			
 			#region TimerAndWin
 			if(!dash)
 			{
@@ -51,7 +53,6 @@ if(activate)
 						{
 							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
 							damage = true;
-							opponentRobot.x -= 2;
 						}
 						
 						
@@ -107,7 +108,7 @@ if(activate)
 						opponentRobot.robotNewLife = opponentRobot.robotLife;
 						robotNewTimer = turnTimer;
 						update = true;
-						var sound = irandom(2);
+						var sound = irandom(15);
 						switch(sound)
 						{
 							case 0:
@@ -120,6 +121,9 @@ if(activate)
 							
 							case 2:
 							audio_play_sound(Damage3, 1, false);
+							break;
+							
+							default:
 							break;
 							
 						}
@@ -146,4 +150,10 @@ if(activate)
 		}
 	}
 	#endregion
+}
+
+if(robotLife / robotLifeMax <= 0.5 && !dead){
+	if(alarm[0] <= -1){
+		alarm[0] = irandom(room_speed*2);
+	}
 }

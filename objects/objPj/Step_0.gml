@@ -40,6 +40,10 @@ if(!dead)
 			image_speed = 1;
 			if(opponentRobot.dash && opponentRobot.image_index > 12)
 			{
+				if(!fxGenerated){
+					srcParticleCreate("Hit");
+				}
+				
 				image_speed = 1.3;
 				srcSpineSetSlots(robotPart);
 				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
@@ -77,5 +81,15 @@ else
 	if(image_index > 34)
 	{
 		image_speed = 0;
+	}
+}
+
+if(!opponentRobot.dash){
+	fxGenerated = false;
+}
+
+if(skeleton_animation_get() == "Defense"){
+	if(!fxGenerated && image_index > 8){
+		srcParticleCreate("Block");
 	}
 }

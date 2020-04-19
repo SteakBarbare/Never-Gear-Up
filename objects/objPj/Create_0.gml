@@ -1,5 +1,5 @@
 event_inherited();
-
+srcSpineSetSlots(robotPart);
 
 robotName = "PJ";
 
