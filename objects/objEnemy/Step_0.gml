@@ -1,5 +1,17 @@
 event_inherited();
 image_xscale = -1;
+
+if(robotName == ""){
+	randomize();
+	var prefix = objNameElements.prefix[irandom(array_length_1d(objNameElements.prefix)-1)];
+	var suffix = objNameElements.suffix[irandom(array_length_1d(objNameElements.suffix)-1)];
+	var nicknamePrefix = objNameElements.nicknamePrefix[irandom(array_length_1d(objNameElements.nicknamePrefix)-1)];
+	var nicknameSuffix = objNameElements.nicknameSuffix[irandom(array_length_1d(objNameElements.nicknameSuffix)-1)];
+
+
+	robotName = "" + prefix + suffix + " " + nicknamePrefix + " " + nicknameSuffix;
+}
+
 if(instance_exists(objEnemy))
 {
 	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
