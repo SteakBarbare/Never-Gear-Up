@@ -15,5 +15,3 @@ skeleton_animation_mix("Stagger", "Idle", 0.3);
 
 //Death
 skeleton_animation_mix("Idle", "Death", 0.3);
-
-

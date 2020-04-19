@@ -1,8 +1,11 @@
 //Globals Stats
 robotLife = 100;
 robotSpeed = 3;
-robotDodge = 5;
-robotDamage = 10;
+robotDodge = 10;
+robotDamage = 5;
+dead = false;
+
+robotLifeMax = 100;
 
 //activate
 
@@ -13,6 +16,8 @@ xOriginal = x;
 damage = false;
 
 dice = 0;
+
+
 
 animationSet = false;
 //isDashing

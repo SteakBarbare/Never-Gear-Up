@@ -1,8 +1,8 @@
 event_inherited();
-
+image_xscale = -1;
 if(instance_exists(objEnemy))
 {
-	var opponentRobot = instance_find(objEnemyTemplate, 0).id;
+	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
 	dead = opponentRobot.win;
 }
 
@@ -35,6 +35,7 @@ if(!dead)
 		srcSpineChangeAnim(skeleton_animation_get(), "Attack Left");
 		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
 		slashFx.sprite_index = sprFxAttackLeft;
+		slashFx.image_xscale = -1;
 		slashFx.image_index = image_index;
 	}
 	else
@@ -42,6 +43,7 @@ if(!dead)
 		srcSpineChangeAnim(skeleton_animation_get(), "Attack Right");
 		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
 		slashFx.sprite_index = sprFxAttackRight;
+		slashFx.image_xscale = -1;
 		slashFx.image_index = image_index;
 	}
 }

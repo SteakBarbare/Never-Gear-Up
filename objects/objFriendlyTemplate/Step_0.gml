@@ -6,11 +6,16 @@ if(activate)
 	#region Pause
 	if(keyboard_check_released(vk_space))
 	{
-	   if(!combat)
+	   if(!combat && !dead)
 	   {
 		   combat = true;
 		   audio_play_sound(FIGHT, 1, false);
 		   image_speed = 1;
+	   }
+	   else if(!combat)
+	   {
+			combat = true;
+			image_speed = 1;
 	   }
 	   else if(!win)
 	   {
@@ -59,6 +64,7 @@ if(activate)
 				{
 					opponentRobot.win = true;
 					robotLife = 0;
+					dead = true;
 				}
 				
 			
@@ -77,15 +83,17 @@ if(activate)
 				{
 					x = x +  2 * (1 + hsp);
 					hsp += 0.9;
-				}
-				else if(image_index < 16) //return start
-				{
-					hsp = 0;
+					
 					if(!damage) //prevent from attacking multiple times
 					{
 						scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
 						damage = true;
+						opponentRobot.x +=2;
 					}
+				}
+				else if(image_index < 16) //return start
+				{
+					hsp = 0;
 				}
 				else if(image_index < 19 && x > xOriginal) //return to original position
 				{
@@ -94,6 +102,7 @@ if(activate)
 				else if(image_index >= 19)
 				{
 					x = xOriginal; //replace the player robots
+					opponentRobot.x -= 2;
 					hsp = 0; 
 					dash = false; //end attack phase
 					damage = false; //prevent from attacking multiple times

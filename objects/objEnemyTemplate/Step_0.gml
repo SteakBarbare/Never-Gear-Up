@@ -1,28 +1,44 @@
 if(activate)
 {
+	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
+	var thisRobot = id;
+
+	#region Pause
 	if(keyboard_check_released(vk_space))
 	{
-	   if(!combat)
+	   if(!combat && !dead)
 	   {
 		   combat = true;
 		   image_speed = 1;
 	   }
-	   else
+	   else if(!combat)
+	   {
+			combat = true;
+			image_speed = 1;
+	   }
+	   else if(!win)
 	   {
 		   combat = false;
 		   image_speed = 0;
 	   }
+	   else if (win)
+	   {
+		    
+			room_goto(Workshop);
+	   }
 	}
+	#endregion
 
-	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
-	var thisRobot = id;
+	#region MortalKombat
 	if(combat)
 	{
+	
 		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
-			if(dash == false)
+			#region TimerAndWin
+			if(!dash)
 			{
-				if(win == false && robotLife > 0)
+				if(!win && robotLife > 0)
 				{
 	
 					if(turnTimer >= turnMaxTimer)
@@ -48,44 +64,52 @@ if(activate)
 					opponentRobot.win = true;
 					robotLife = 0;
 				}
-				else if(win && !victorySound)
-				{
-					audio_play_sound(LOSER, 1, false);	
-					victorySound = true;
-				}
+				
+			
 			}
-			else if(dash && animTime < 60)
+			#endregion
+		
+			#region playAttaque
+			else if(dash && image_index < 20 && image_index > 10) //when player is attacking(dash)
 			{
-				if(animTime < 30)
-				{	
-					x = x - (3 + hsp);
-					hsp += 0.250
-					animTime++;
+				if (image_index > 10 && image_index < 13) //speed when the animation is attacking
+				{
+					x = x - 2 * (1 + hsp);
+					hsp += 0.8; //hsp = horizontal speed
 				}
-				else if (animTime == 30)
+				else if (image_index < 14) 
+				{
+					x = x -  2 * (1 + hsp);
+					hsp += 0.9;
+					
+				}
+				else if(image_index < 16) //return start
 				{
 					hsp = 0;
-					x = x + (3 +  hsp);
-					opponentRobot.x -=20;
-					scrRobotTurn(thisRobot, opponentRobot);
-					animTime++;
-					hsp += 0.250;
+					if(!damage) //prevent from attacking multiple times
+					{
+						scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
+						damage = true;
+						opponentRobot.x -= 2;
+					}
 				}
-				else if (animTime > 30)
+				else if(image_index < 19 && x < xOriginal) //return to original position
 				{
-					x = x + (3 + hsp);
-					hsp += 0.250;
-					animTime++;
+					x+= 12;
 				}
-	
+				else if(image_index >= 19)
+				{
+					x = xOriginal; //replace the player robots
+					hsp = 0; 
+					opponentRobot.x += 2;
+					dash = false; //end attack phase
+					damage = false; //prevent from attacking multiple times
+				}
+			
 			}
-			else if(animTime >= 60)
-			{
-				animTime = 0;
-				opponentRobot.x +=20;
-				hsp = 0;
-				dash = false;
-			}
+			#endregion
+		
 		}
 	}
+	#endregion
 }
