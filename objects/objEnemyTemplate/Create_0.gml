@@ -1,48 +1,73 @@
 //Globals Stats
-robotLife = 100;
-robotSpeed = 5;
-robotDodge = 15;
-robotDamage = 10;
+robotLifeMax = 100;
 
+robotLife = robotLifeMax;
+robotSpeed = 2;
+robotDodge = 10;
+robotDamage = 30;
+dead = false;
+
+robotNewLife = robotLife;
+
+
+
+diceDodge = 0;
+update = false;
+
+//activate
+
+activate = false;
+
+xOriginal = x;
+
+damage = false;
+
+dice = 0;
+
+haveDodge = false;
+
+stagMove = false;
+
+animationSet = false;
 //isDashing
 dash = false;
-v = 0;
+hsp = 0;
 animTime = 0;
 
 //pause
 combat = false;
+victorySound = false;
 
 //Life Parts --- 0 = life
-
 robotPart[0, 0] = 20; // Head
-robotPart[1, 0] = 20; // Body
-robotPart[2, 0] = 20; // rightArm
-robotPart[3, 0] = 20; // leftArm
-robotPart[4, 0] = 20; // rightLeg
-robotPart[5, 0] = 20; // leftLeg
+robotPart[0, 1] = 40; // Body
+robotPart[0, 2] = 30; // rightArm
+robotPart[0, 3] = 30; // leftArm
+robotPart[0, 4] = 30; // rightLeg
+robotPart[0, 5] = 30; // leftLeg
 
-//Parts --- 1 = parti
+//Parts --- 1 = part
 
-robotPart[0, 1] = "default"; // Head
-robotPart[1, 1] = "default"; // Body
-robotPart[2, 1] = "default"; // rightArm
-robotPart[3, 1] = "default"; // leftArm
-robotPart[4, 1] = "default"; // rightLeg
-robotPart[5, 1] = "default"; // leftLeg
+robotPart[1, 0] = "Default"; // Head
+robotPart[1, 1] = "Default"; // Body
+robotPart[1, 2] = "Default"; // rightArm
+robotPart[1, 3] = "Default"; // leftArm
+robotPart[1, 4] = "Default"; // rightLeg
+robotPart[1, 5] = "Default"; // leftLeg
 
 //Parts --- 2 = modifier
 
-robotPart[0, 2] = 0; // Head
-robotPart[1, 2] = 0; // Body
+robotPart[2, 0] = 0; // Head
+robotPart[2, 1] = 0; // Body
 robotPart[2, 2] = 0; // rightArm
-robotPart[3, 2] = 0; // leftArm
-robotPart[4, 2] = 0; // rightLeg
-robotPart[5, 2] = 0; // leftLeg
-
+robotPart[2, 3] = 0; // leftArm
+robotPart[2, 4] = 0; // rightLeg
+robotPart[2, 5] = 0; // leftLeg
 
 //Turn Var
 turnMaxTimer = room_speed * 3;
 turnTimer = irandom(robotSpeed);
+robotNewTimer = turnTimer;
 isActive = false;
 
 //Combat Var

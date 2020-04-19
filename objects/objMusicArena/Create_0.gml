@@ -1,0 +1,1 @@
+audio_play_sound(MusicArena, 1, true);

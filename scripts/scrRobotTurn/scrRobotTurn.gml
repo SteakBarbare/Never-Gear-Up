@@ -3,25 +3,33 @@
 /// @param  {object}   opponent      PJ or Ennemies
 /// @description       entire turn execution
 
-var activeRobot, opponent;
+var activeRobot, opponent, targetPart;
 
 activeRobot = argument[0];
 opponent = argument [1];
+targetPart = 0;
 
 activeRobot.turnTimer = 0;
 
-targetPart = irandom(5);
-Dodge = irandom(100);
+
+
+Dodge = irandom(100 );
+
+show_debug_message(string(Dodge) + " " + string(opponent.robotDodge));
 if(Dodge > opponent.robotDodge)
 {
-	if(opponent.robotPart[targetPart, 0] > 0)
+	targetPart = irandom(5);
+	if(opponent.robotPart[0, targetPart] > 0)
 	{
-		opponent.robotPart[targetPart, 0] -= activeRobot.robotDamage;
+		opponent.robotPart[0, targetPart] -= activeRobot.robotDamage;
 		opponent.robotLife -= activeRobot.robotDamage;
-		if(opponent.robotPart[targetPart, 0] <= 0)
+		
+		if(opponent.robotPart[0, targetPart] <= 0)
 		{
 			scrBrokenPart(opponent, targetPart);
+			activeRobot.broke = true;
 		}
+		
 	}
 
 	else 
@@ -31,6 +39,10 @@ if(Dodge > opponent.robotDodge)
 
 	
 }
+
+
+
+opponent.diceDodge = Dodge; 
 
 return activeRobot-opponent; 
 

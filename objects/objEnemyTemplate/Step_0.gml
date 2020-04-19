@@ -1,82 +1,141 @@
-if(keyboard_check_released(vk_space))
+if(activate)
 {
-   if(!combat)
-   {
-	   combat = true;
-   }
-   else
-   {
-	   combat = false;
-   }
-}
+	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
+	var thisRobot = id;
 
-var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
-var thisRobot = id;
-if(combat)
-{
-if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
-{
-	if(dash == false)
+	#region Pause
+	if(keyboard_check_released(vk_space))
 	{
-		if(win == false && robotLife > 0)
+	   if(!combat && !dead)
+	   {
+		   combat = true;
+		   image_speed = 1;
+	   }
+	   else if(!combat)
+	   {
+			combat = true;
+			image_speed = 1;
+	   }
+	   else if(!win)
+	   {
+		   combat = false;
+		   image_speed = 0;
+	   }
+	   else if (win)
+	   {
+		    
+			room_goto(Workshop);
+	   }
+	}
+	#endregion
+
+	#region MortalKombat
+	if(combat)
+	{
+	
+		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
-	
-			if(turnTimer >= turnMaxTimer)
+			#region TimerAndWin
+			if(!dash)
 			{
+				if(!win && robotLife > 0)
+				{
 	
-				isActive = true;
+					if(turnTimer >= turnMaxTimer)
+					{
+	
+						isActive = true;
+						
+						if(!damage) //prevent from attacking multiple times
+						{
+							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
+							damage = true;
+							opponentRobot.x -= 2;
+						}
 				
-				dash = true;
+						dash = true;
 			
-				isActive = false;
+						isActive = false;
 	
 		
-			}
+					}
 	
-			else if(!opponentRobot.isActive || !opponentRobot.dash)
+					else if(!opponentRobot.isActive || !opponentRobot.dash)
+					{
+						turnTimer = turnTimer + robotSpeed;
+						robotNewTimer = turnTimer;
+					}
+				}
+				else if (robotLife <= 0)
+				{
+					opponentRobot.win = true;
+					robotLife = 0;
+				}
+				
+			
+			}
+			#endregion
+		
+			#region playAttaque
+			else if(dash && image_index < 20 && image_index > 10) //when player is attacking(dash)
 			{
-		
-				turnTimer = turnTimer + robotSpeed;
+				
+				if (image_index > 10 && image_index < 13) //speed when the animation is attacking
+				{
+					x = x - 2 * (1 + hsp);
+					hsp += 0.8; //hsp = horizontal speed
+				}
+				else if (image_index < 14) 
+				{
+					x = x - 2 * (1 + hsp);
+					hsp += 0.9;
+					
+				}
+				else if(image_index < 16) //return start
+				{
+					hsp = 0;
+					if(!update)
+					{
+						opponentRobot.robotNewLife = opponentRobot.robotLife;
+						robotNewTimer = turnTimer;
+						update = true;
+						var sound = irandom(2);
+						switch(sound)
+						{
+							case 0:
+							audio_play_sound(Damage1, 1, false);
+							break;
+							
+							case 1:
+							audio_play_sound(Damage2, 1, false);
+							break;
+							
+							case 2:
+							audio_play_sound(Damage3, 1, false);
+							break;
+							
+						}
+					}
+					
+				}
+				else if(image_index < 19 && x < xOriginal) //return to original position
+				{
+					x+= 12;
+				}
+				else if(image_index >= 19)
+				{
+					x = xOriginal; //replace the player robots
+					hsp = 0; 
+					opponentRobot.x += 2;
+					dash = false; //end attack phase
+					damage = false; //prevent from attacking multiple times
+					update = false
+				}
+			
 			}
-		}
-		else if (robotLife <= 0)
-		{
-			opponentRobot.win = true;
-			robotLife = 0;
+			#endregion
+		
 		}
 	}
-	else if(dash && animTime < 60)
-	{
-		if(animTime < 30)
-		{	
-			x = x - (3 + v);
-			v += 0.250
-			animTime++;
-		}
-		else if (animTime == 30)
-		{
-			v = 0;
-			x = x + (3 +  v);
-			opponentRobot.x -=20;
-			scrRobotTurn(thisRobot, opponentRobot);
-			animTime++;
-			v += 0.250;
-		}
-		else if (animTime > 30)
-		{
-			x = x + (3 + v);
-			v += 0.250;
-			animTime++;
-		}
-	
-	}
-	else if(animTime >= 60)
-	{
-		animTime = 0;
-		opponentRobot.x +=20;
-		v = 0;
-		dash = false;
-	}
+	#endregion
 }
-}
-
