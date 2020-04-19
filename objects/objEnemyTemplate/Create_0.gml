@@ -76,6 +76,7 @@ isActive = false;
 
 //Combat Var
 win = false;
+isBroken = false;
 
 // Fx Var
 fxGenerated = false;

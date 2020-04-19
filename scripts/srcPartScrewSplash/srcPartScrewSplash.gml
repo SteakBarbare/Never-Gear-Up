@@ -15,6 +15,17 @@ part_type_direction(global.oilParticle, 0, 360, random_range(-1, 1), 0);
 part_type_gravity(global.oilParticle, 0.1, 270);
 part_type_life(global.oilParticle, 25, 50);
 
+
+global.sparkParticle = part_type_create();
+
+part_type_shape(global.sparkParticle, pt_shape_spark);
+part_type_size(global.sparkParticle, 0.1, 0.5, -0.05, 0);
+part_type_color2(global.sparkParticle, c_yellow, c_orange);
+part_type_speed(global.sparkParticle, 0.5, 2, 0, 0);
+part_type_direction(global.sparkParticle, 0, 360, random_range(-1, 1), 0);
+part_type_gravity(global.sparkParticle, 0.1, 270);
+part_type_life(global.sparkParticle, 60, 90);
+
 #region Screws Part
 global.screwParticle = part_type_create();
 

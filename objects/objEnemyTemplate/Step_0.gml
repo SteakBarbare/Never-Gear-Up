@@ -51,7 +51,6 @@ if(activate)
 						{
 							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
 							damage = true;
-							opponentRobot.x -= 2;
 						}
 				
 						dash = true;

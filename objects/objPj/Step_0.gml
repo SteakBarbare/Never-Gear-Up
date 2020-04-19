@@ -43,6 +43,7 @@ if(!dead)
 				if(!fxGenerated){
 					srcParticleCreate("Hit");
 				}
+				
 				image_speed = 1.3;
 				srcSpineSetSlots(robotPart);
 				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
