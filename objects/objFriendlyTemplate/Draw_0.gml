@@ -5,7 +5,7 @@ if(robotLife <= 0)
 }
 else if(win)
 {
-	draw_text(300, 300, "you win")	;
+	draw_text(300, 300, "you win, press space !")	;
 }
 if(!combat)
 {
@@ -98,5 +98,5 @@ else if(robotPart[5, 0] <= 100)
 }
 
 //speedBar
-draw_healthbar(121, 21, 266, 12, (turnTimer/180)*100, c_black, c_aqua, c_aqua, 0, true, true)
+draw_healthbar(121, 21, 262, 12, (turnTimer/180)*100, c_black, c_aqua, c_aqua, 0, true, true)
 

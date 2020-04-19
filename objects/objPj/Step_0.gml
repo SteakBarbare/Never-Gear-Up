@@ -5,7 +5,7 @@ if(!animationSet)
 	dice = irandom(1);
 	animationSet = true;
 }
-
+show_debug_message(combat);
 if(!dash)
 {
 	srcSpineChangeAnim(skeleton_animation_get(), "Idle");

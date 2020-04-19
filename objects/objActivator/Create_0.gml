@@ -1,0 +1,2 @@
+pjActive = false;
+pnjActive = false;

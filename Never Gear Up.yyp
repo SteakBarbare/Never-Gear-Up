@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "2ae13991-aa20-4a0e-9f38-1a0a7a7b8b14",
+            "Value": {
+                "id": "64d2f70c-8fed-4277-b9dd-30d3a641bde7",
+                "resourcePath": "objects\\objActivator\\objActivator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "32edb808-7d55-42b2-b55d-1e166789d3fb",
             "Value": {
                 "id": "f8532bfe-8ee6-4cd2-93ed-38a3ac099ad0",

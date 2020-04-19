@@ -1,8 +1,12 @@
 //Globals Stats
 robotLife = 100;
-robotSpeed = 3;
-robotDodge = 0;
-robotDamage = 20;
+robotSpeed = 2;
+robotDodge = 5;
+robotDamage = 50;
+
+//activate
+
+activate = false;
 
 xOriginal = x;
 
@@ -22,11 +26,11 @@ combat = false;
 //Life Parts --- 0 = life
 
 robotPart[0, 0] = 20; // Head
-robotPart[1, 0] = 20; // Body
-robotPart[2, 0] = 20; // rightArm
-robotPart[3, 0] = 20; // leftArm
-robotPart[4, 0] = 20; // rightLeg
-robotPart[5, 0] = 20; // leftLeg
+robotPart[1, 0] = 40; // Body
+robotPart[2, 0] = 30; // rightArm
+robotPart[3, 0] = 30; // leftArm
+robotPart[4, 0] = 30; // rightLeg
+robotPart[5, 0] = 30; // leftLeg
 
 //Parts --- 1 = parti
 

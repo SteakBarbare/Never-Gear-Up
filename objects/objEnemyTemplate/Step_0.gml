@@ -1,82 +1,86 @@
-if(keyboard_check_released(vk_space))
+if(activate)
 {
-   if(!combat)
-   {
-	   combat = true;
-   }
-   else
-   {
-	   combat = false;
-   }
-}
-
-var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
-var thisRobot = id;
-if(combat)
-{
-if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
-{
-	if(dash == false)
+	if(keyboard_check_released(vk_space))
 	{
-		if(win == false && robotLife > 0)
+	   if(!combat)
+	   {
+		   combat = true;
+		   image_speed = 1;
+	   }
+	   else
+	   {
+		   combat = false;
+		   image_speed = 0;
+	   }
+	}
+
+	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
+	var thisRobot = id;
+	if(combat)
+	{
+		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
-	
-			if(turnTimer >= turnMaxTimer)
+			if(dash == false)
 			{
+				if(win == false && robotLife > 0)
+				{
 	
-				isActive = true;
+					if(turnTimer >= turnMaxTimer)
+					{
+	
+						isActive = true;
 				
-				dash = true;
+						dash = true;
 			
-				isActive = false;
+						isActive = false;
 	
 		
-			}
+					}
 	
-			else if(!opponentRobot.isActive || !opponentRobot.dash)
+					else if(!opponentRobot.isActive || !opponentRobot.dash)
+					{
+		
+						turnTimer = turnTimer + robotSpeed;
+					}
+				}
+				else if (robotLife <= 0)
+				{
+					opponentRobot.win = true;
+					robotLife = 0;
+				}
+			}
+			else if(dash && animTime < 60)
 			{
-		
-				turnTimer = turnTimer + robotSpeed;
+				if(animTime < 30)
+				{	
+					x = x - (3 + hsp);
+					hsp += 0.250
+					animTime++;
+				}
+				else if (animTime == 30)
+				{
+					hsp = 0;
+					x = x + (3 +  hsp);
+					opponentRobot.x -=20;
+					scrRobotTurn(thisRobot, opponentRobot);
+					animTime++;
+					hsp += 0.250;
+				}
+				else if (animTime > 30)
+				{
+					x = x + (3 + hsp);
+					hsp += 0.250;
+					animTime++;
+				}
+	
+			}
+			else if(animTime >= 60)
+			{
+				animTime = 0;
+				opponentRobot.x +=20;
+				hsp = 0;
+				dash = false;
 			}
 		}
-		else if (robotLife <= 0)
-		{
-			opponentRobot.win = true;
-			robotLife = 0;
-		}
-	}
-	else if(dash && animTime < 60)
-	{
-		if(animTime < 30)
-		{	
-			x = x - (3 + hsp);
-			hsp += 0.250
-			animTime++;
-		}
-		else if (animTime == 30)
-		{
-			hsp = 0;
-			x = x + (3 +  hsp);
-			opponentRobot.x -=20;
-			scrRobotTurn(thisRobot, opponentRobot);
-			animTime++;
-			hsp += 0.250;
-		}
-		else if (animTime > 30)
-		{
-			x = x + (3 + hsp);
-			hsp += 0.250;
-			animTime++;
-		}
-	
-	}
-	else if(animTime >= 60)
-	{
-		animTime = 0;
-		opponentRobot.x +=20;
-		hsp = 0;
-		dash = false;
 	}
 }
-}
-
