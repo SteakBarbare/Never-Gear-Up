@@ -50,21 +50,21 @@ robotPart[0, 5] = 30; // leftLeg
 
 //Parts --- 1 = part
 
-robotPart[1, 0] = "Default"; // Head
-robotPart[1, 1] = "Default"; // Body
-robotPart[1, 2] = "Default"; // rightArm
-robotPart[1, 3] = "Default"; // leftArm
-robotPart[1, 4] = "Default"; // rightLeg
-robotPart[1, 5] = "Default"; // leftLeg
+robotPart[1, 0] = "Destroyer"; // Head
+robotPart[1, 1] = "Destroyer"; // Body
+robotPart[1, 2] = "Destroyer"; // rightArm
+robotPart[1, 3] = "Destroyer"; // leftArm
+robotPart[1, 4] = "Destroyer"; // rightLeg
+robotPart[1, 5] = "Destroyer"; // leftLeg
 
 //Parts --- 2 = modifier
 
-robotPart[2, 0] = 1; // Head
-robotPart[2, 1] = 1; // Body
-robotPart[2, 2] = 1; // rightArm
-robotPart[2, 3] = 1; // leftArm
-robotPart[2, 4] = 1; // rightLeg
-robotPart[2, 5] = 1; // leftLeg
+robotPart[2, 0] = 20; // Head
+robotPart[2, 1] = 20; // Body
+robotPart[2, 2] = 5; // rightArm
+robotPart[2, 3] = 5; // leftArm
+robotPart[2, 4] = 2; // rightLeg
+robotPart[2, 5] = 2; // leftLeg
 
 //life calcul
 robotLifeMax = 100 + robotPart[0, 0]/2 + robotPart[0, 1]/2 + robotPart[0, 2]/2 + robotPart[0, 3]/2 + robotPart[0, 4]/2 + robotPart[0, 5]/2;
