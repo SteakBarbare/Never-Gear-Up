@@ -76,3 +76,6 @@ isActive = false;
 
 //Combat Var
 win = false;
+
+// Fx Var
+isBleeding = false;

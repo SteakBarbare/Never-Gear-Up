@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "539cd0f6-9125-4c0c-b453-6b793c95e22b",
+            "Value": {
+                "id": "502493f3-caf0-406f-b313-c79995dea51a",
+                "resourcePath": "views\\539cd0f6-9125-4c0c-b453-6b793c95e22b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5569d995-fd38-4351-abca-c61910990f4d",
             "Value": {
                 "id": "e2bd6e26-0380-419d-a85a-77037a6a432f",
@@ -300,6 +308,14 @@
                 "id": "a535eb54-6466-4987-aeb0-4e8d4a714265",
                 "resourcePath": "views\\6ca07c89-53de-4f20-a6da-04260570d326.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6e433c6d-2119-4f6e-a912-c48a09f91f36",
+            "Value": {
+                "id": "8fb96993-7340-4019-86fa-7d3c5993bcff",
+                "resourcePath": "sprites\\sprScrew\\sprScrew.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -356,6 +372,14 @@
                 "id": "ff33b852-389a-4020-be90-3fe08cb35850",
                 "resourcePath": "views\\82a8485e-547b-403c-9d4a-283cae5ffbde.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "846bf7b2-ffca-4e8f-98b2-9f42e2c9ead6",
+            "Value": {
+                "id": "4c8905f6-02b4-4629-85ad-adcbca915e26",
+                "resourcePath": "scripts\\srcPartScrewSplash\\srcPartScrewSplash.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -452,6 +476,14 @@
                 "id": "4e1d81ef-fe1d-475e-9ef4-3a5eff601f32",
                 "resourcePath": "views\\b3a4590d-d4e7-46df-835d-3c00b54e32f3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b9ba7fd6-27b1-4a11-9d2b-0e9360ccb3f2",
+            "Value": {
+                "id": "eb475f3b-36bd-475d-a1e5-562da11e770b",
+                "resourcePath": "objects\\objParticlesController\\objParticlesController.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -573,7 +605,8 @@
         "310d72ce-66b7-4476-8c3e-30419eb940fb",
         "13bd6aa5-dd7c-4a6b-8ec7-51c3b79e1cae",
         "76501994-6bb8-486d-9840-3a79eeb8917c",
-        "f0e0ee84-2735-44f9-bfb9-90e1cbba0ecc"
+        "f0e0ee84-2735-44f9-bfb9-90e1cbba0ecc",
+        "846bf7b2-ffca-4e8f-98b2-9f42e2c9ead6"
     ],
     "tutorial": ""
 }
