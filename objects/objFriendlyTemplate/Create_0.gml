@@ -1,12 +1,18 @@
 //Globals Stats
-robotLife = 100;
+robotLifeMax = 100;
+
+robotLife = robotLifeMax;
 robotSpeed = 3;
-robotDodge = 99;
-robotDamage = 5;
+robotDodge = 30;
+robotDamage = 10;
 dead = false;
+
+robotNewLife = robotLife;
 
 robotLifeMax = 100;
 
+update = false;
+diceDodge = 0;
 //activate
 
 activate = false;
@@ -61,6 +67,7 @@ robotPart[2, 5] = 0; // leftLeg
 //Turn Var
 turnMaxTimer = room_speed * 3;
 turnTimer = irandom(robotSpeed);
+robotNewTimer = turnTimer;
 isActive = false;
 
 //Combat Var

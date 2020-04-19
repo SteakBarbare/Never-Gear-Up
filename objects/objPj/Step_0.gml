@@ -17,11 +17,14 @@ if(!dead)
 {
 	if(!dash)
 	{
-		if(haveDodge)
+		
+		if(diceDodge <= robotDodge)
 		{
+			
 			image_speed = 1;
-			if(opponentRobot.dash)
+			if(opponentRobot.dash && opponentRobot.image_index > 4)
 			{
+				
 				image_speed = 1;
 				srcSpineChangeAnim(skeleton_animation_get(), "Defense");
 			

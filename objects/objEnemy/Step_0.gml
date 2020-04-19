@@ -29,33 +29,54 @@ if(!dead)
 {
 	if(!dash)
 	{
-		image_speed = 1;
-		if(opponentRobot.dash && opponentRobot.image_index > 12)
+		
+		if(diceDodge <= robotDodge)
 		{
-			image_speed = 1.3;
-			srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
 			
+			image_speed = 1;
+			if(opponentRobot.dash && opponentRobot.image_index > 4)
+			{
+				
+				image_speed = 1;
+				srcSpineChangeAnim(skeleton_animation_get(), "Defense");
+			
+			}
+			else
+			{
+				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+				animationSet = false;
+			}
 		}
 		else
 		{
-			srcSpineChangeAnim(skeleton_animation_get(), "Idle");
-			animationSet = false;
+			image_speed = 1;
+			if(opponentRobot.dash && opponentRobot.image_index > 12)
+			{
+				image_speed = 1.3;
+				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");
+			
+			}
+			else
+			{
+				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+				animationSet = false;
+			}
 		}
 	}
 	else if(dice == 0)
 	{
 		srcSpineChangeAnim(skeleton_animation_get(), "Attack Left");
 		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
-		slashFx.sprite_index = sprFxAttackLeft;
 		slashFx.image_xscale = -1;
+		slashFx.sprite_index = sprFxAttackLeft;
 		slashFx.image_index = image_index;
 	}
 	else
 	{
 		srcSpineChangeAnim(skeleton_animation_get(), "Attack Right");
 		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
-		slashFx.sprite_index = sprFxAttackRight;
 		slashFx.image_xscale = -1;
+		slashFx.sprite_index = sprFxAttackRight;
 		slashFx.image_index = image_index;
 	}
 }

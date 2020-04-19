@@ -45,6 +45,13 @@ if(activate)
 					{
 	
 						isActive = true;
+						
+						if(!damage) //prevent from attacking multiple times
+						{
+							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
+							damage = true;
+							opponentRobot.x -= 2;
+						}
 				
 						dash = true;
 			
@@ -55,8 +62,8 @@ if(activate)
 	
 					else if(!opponentRobot.isActive || !opponentRobot.dash)
 					{
-		
 						turnTimer = turnTimer + robotSpeed;
+						robotNewTimer = turnTimer;
 					}
 				}
 				else if (robotLife <= 0)
@@ -72,6 +79,7 @@ if(activate)
 			#region playAttaque
 			else if(dash && image_index < 20 && image_index > 10) //when player is attacking(dash)
 			{
+				
 				if (image_index > 10 && image_index < 13) //speed when the animation is attacking
 				{
 					x = x - 2 * (1 + hsp);
@@ -79,19 +87,20 @@ if(activate)
 				}
 				else if (image_index < 14) 
 				{
-					x = x -  2 * (1 + hsp);
+					x = x - 2 * (1 + hsp);
 					hsp += 0.9;
 					
 				}
 				else if(image_index < 16) //return start
 				{
 					hsp = 0;
-					if(!damage) //prevent from attacking multiple times
+					if(!update)
 					{
-						scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
-						damage = true;
-						opponentRobot.x -= 2;
+						opponentRobot.robotNewLife = opponentRobot.robotLife;
+						robotNewTimer = turnTimer;
+						update = true;
 					}
+					
 				}
 				else if(image_index < 19 && x < xOriginal) //return to original position
 				{
@@ -104,6 +113,7 @@ if(activate)
 					opponentRobot.x += 2;
 					dash = false; //end attack phase
 					damage = false; //prevent from attacking multiple times
+					update = false
 				}
 			
 			}

@@ -13,9 +13,9 @@ activeRobot.turnTimer = 0;
 
 
 
-Dodge = irandom(100);
+Dodge = irandom(100 );
 
-
+show_debug_message(string(Dodge) + " " + string(opponent.robotDodge));
 if(Dodge > opponent.robotDodge)
 {
 	targetPart = irandom(5);
@@ -38,10 +38,10 @@ if(Dodge > opponent.robotDodge)
 
 	
 }
-else
-{
-	opponent.haveDodge = true;	
-}
+
+
+
+opponent.diceDodge = Dodge; 
 
 return activeRobot-opponent; 
 

@@ -18,8 +18,8 @@ if(!combat)
 
 
 //speedBar
-draw_healthbar(121, 21, 262, 12, (turnTimer/180)*100, c_black, c_aqua, c_aqua, 0, true, true);
-draw_healthbar(121, 46, 220, 31, (robotLife/robotLifeMax)*100, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(121, 21, 262, 12, (robotNewTimer/180)*100, c_black, c_aqua, c_aqua, 0, true, true);
+draw_healthbar(121, 46, 220, 31, (robotNewLife/robotLifeMax)*100, c_black, c_red, c_green, 0, true, true);
 
 //partLife
 

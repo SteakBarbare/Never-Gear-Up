@@ -9,7 +9,6 @@ if(activate)
 	   if(!combat && !dead)
 	   {
 		   combat = true;
-		   audio_play_sound(FIGHT, 1, false);
 		   image_speed = 1;
 	   }
 	   else if(!combat)
@@ -34,7 +33,7 @@ if(activate)
 	if(combat)
 	{
 	
-		if(instance_exists(objEnemyTemplate) && !opponentRobot.dash)
+		if(instance_exists(objFriendlyTemplate) && !opponentRobot.dash)
 		{
 			#region TimerAndWin
 			if(!dash)
@@ -46,6 +45,13 @@ if(activate)
 					{
 	
 						isActive = true;
+						
+						if(!damage) //prevent from attacking multiple times
+						{
+							scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
+							damage = true;
+							opponentRobot.x -= 2;
+						}
 				
 						dash = true;
 			
@@ -56,21 +62,14 @@ if(activate)
 	
 					else if(!opponentRobot.isActive || !opponentRobot.dash)
 					{
-		
 						turnTimer = turnTimer + robotSpeed;
+						robotNewTimer = turnTimer;
 					}
 				}
 				else if (robotLife <= 0)
 				{
 					opponentRobot.win = true;
 					robotLife = 0;
-					if(!deathSound)
-					{
-						audio_play_sound(LOSER, 1, false);
-						deathSound = true;
-					}
-					dead = true;
-					
 				}
 				
 			
@@ -80,6 +79,7 @@ if(activate)
 			#region playAttaque
 			else if(dash && image_index < 20 && image_index > 10) //when player is attacking(dash)
 			{
+				
 				if (image_index > 10 && image_index < 13) //speed when the animation is attacking
 				{
 					x = x + 2 * (1 + hsp);
@@ -90,16 +90,17 @@ if(activate)
 					x = x +  2 * (1 + hsp);
 					hsp += 0.9;
 					
-					if(!damage) //prevent from attacking multiple times
-					{
-						scrRobotTurn(thisRobot, opponentRobot); //turn damage calculation
-						damage = true;
-						opponentRobot.x +=2;
-					}
 				}
 				else if(image_index < 16) //return start
 				{
 					hsp = 0;
+					if(!update)
+					{
+						opponentRobot.robotNewLife = opponentRobot.robotLife;
+						robotNewTimer = turnTimer;
+						update = true;
+					}
+					
 				}
 				else if(image_index < 19 && x > xOriginal) //return to original position
 				{
@@ -108,10 +109,11 @@ if(activate)
 				else if(image_index >= 19)
 				{
 					x = xOriginal; //replace the player robots
-					opponentRobot.x -= 2;
 					hsp = 0; 
+					opponentRobot.x += 2;
 					dash = false; //end attack phase
 					damage = false; //prevent from attacking multiple times
+					update = false
 				}
 			
 			}
