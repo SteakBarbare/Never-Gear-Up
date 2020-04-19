@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "ae407cc9-43e4-4888-ba83-0043bd7dfb89",
+            "Value": {
+                "id": "3441c7e6-e97a-424d-9bcd-85d998090fa2",
+                "resourcePath": "objects\\objArenaInterface\\objArenaInterface.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b3a4590d-d4e7-46df-835d-3c00b54e32f3",
             "Value": {
                 "id": "4e1d81ef-fe1d-475e-9ef4-3a5eff601f32",
