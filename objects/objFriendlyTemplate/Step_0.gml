@@ -109,6 +109,22 @@ if(activate)
 						opponentRobot.robotNewLife = opponentRobot.robotLife;
 						robotNewTimer = turnTimer;
 						update = true;
+						var sound = irandom(2);
+						switch(sound)
+						{
+							case 0:
+							audio_play_sound(Damage1, 1, false);
+							break;
+							
+							case 1:
+							audio_play_sound(Damage2, 1, false);
+							break;
+							
+							case 2:
+							audio_play_sound(Damage3, 1, false);
+							break;
+							
+						}
 					}
 					
 				}

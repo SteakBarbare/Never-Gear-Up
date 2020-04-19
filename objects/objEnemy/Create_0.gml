@@ -1,4 +1,5 @@
 event_inherited();
+srcSpineSetSlots(robotPart);
 
 skeleton_animation_set("Idle");
 

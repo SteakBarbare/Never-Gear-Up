@@ -1,8 +1,8 @@
 {
-    "id": "877b12fb-1eac-449c-8445-1f53cc3f9447",
+    "id": "5569d995-fd38-4351-abca-c61910990f4d",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "FIGHT",
+    "name": "Damage1",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,

@@ -7,8 +7,6 @@ var robot = argument[0];
 
 var part = argument[1];
 
-show_debug_message(robot.robotName + " part : " +string(part));
-
 switch(part)
 {
 		//Head
@@ -30,6 +28,7 @@ switch(part)
 		case 2:
 			robot.robotPart[0, 2] = 0;
 			robot.robotPart[1, 2] = "Broken";
+
 			robot.robotPart[2, 2] = -1;
 			break;
 		
@@ -52,5 +51,9 @@ switch(part)
 			robot.robotPart[0, 5] = 0;
 			robot.robotPart[1, 5] = "Broken";
 			robot.robotPart[2, 5] = -1;
+
 			break;
+
+
+
 }
