@@ -9,7 +9,7 @@ global.oilParticle = part_type_create();
 
 part_type_shape(global.oilParticle, pt_shape_pixel);
 part_type_size(global.oilParticle, 1, 3, -0.05, 0);
-part_type_color2(global.oilParticle, c_maroon, c_dkgray);
+part_type_color2(global.oilParticle, c_dkgray, c_black);
 part_type_speed(global.oilParticle, 0.5, 2, 0, 0);
 part_type_direction(global.oilParticle, 0, 360, random_range(-1, 1), 0);
 part_type_gravity(global.oilParticle, 0.1, 270);

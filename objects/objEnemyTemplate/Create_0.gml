@@ -79,3 +79,4 @@ win = false;
 
 // Fx Var
 isBleeding = false;
+flash = 0;
