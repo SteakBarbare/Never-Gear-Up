@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "6307cedf-3145-41ad-b3f2-0997a47b7d8b",
+            "Value": {
+                "id": "477dfd8f-3c47-4a9a-bf3e-2986c2b8b5b7",
+                "resourcePath": "sprites\\sprBackBackgroundArena\\sprBackBackgroundArena.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "66951ea9-8b51-4ddf-b975-07dcda6f13cd",
             "Value": {
                 "id": "f616d0a3-08c5-4d90-a6c5-418d38d012aa",
