@@ -64,7 +64,13 @@ if(activate)
 				{
 					opponentRobot.win = true;
 					robotLife = 0;
+					if(!deathSound)
+					{
+						audio_play_sound(LOSER, 1, false);
+						deathSound = true;
+					}
 					dead = true;
+					
 				}
 				
 			

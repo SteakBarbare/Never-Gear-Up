@@ -17,6 +17,8 @@ damage = false;
 
 dice = 0;
 
+deathSound = false;
+
 
 
 animationSet = false;

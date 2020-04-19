@@ -1,5 +1,7 @@
 event_inherited();
 
+robotName = "PJ";
+
 skeleton_animation_set("Idle");
 
 //Attack mix
