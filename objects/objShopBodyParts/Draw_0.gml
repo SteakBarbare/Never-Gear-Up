@@ -1,4 +1,5 @@
 var clickLeft = mouse_check_button(mb_left);
+var thisRobot = instance_find(objPj, 0).id;
 
 draw_self();
 
@@ -182,20 +183,88 @@ switch(image_index)
 		
 }
 
-if(isSelected1)
+ if(selected != -1)
 {
-	draw_sprite(sprSelected, 0, 0, 0);	
-	draw_sprite(sprWorkshopStatsButtonShop, 3, 0, 0);
+	draw_sprite(sprSelected, selected, 0, 0)	
+	
+
+	
+	if(mouseOn)
+	{
+		draw_sprite(sprWorkshopStatsButtonShop, 4, 0, 0);
+	}
+	else
+	{
+		draw_sprite(sprWorkshopStatsButtonShop, 3, 0, 0);
+	}
 }
-else if(isSelected2)
+
+if(achat)
 {
-	draw_sprite(sprSelected, 1, 0, 0)
-	draw_sprite(sprWorkshopStatsButtonShop, 3, 0, 0);
-}
-else if(isSelected3)
-{
-	draw_sprite(sprSelected, 2, 0, 0)	
-	draw_sprite(sprWorkshopStatsButtonShop, 3, 0, 0);
+	switch(image_index)
+	{
+		case 1:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 0] = shopParts[2, selected];
+				thisRobot.robotPart[1, 0] = shopParts[5, selected];
+				thisRobot.robotPart[2, 0] = shopParts[3, selected];
+			}
+			break;
+			
+		case 2:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 1] = shopParts[2, selected+3];
+				thisRobot.robotPart[1, 1] = shopParts[5, selected+3];
+				thisRobot.robotPart[2, 1] = shopParts[3, selected+3];
+			}
+			break;
+			
+		case 3:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 3] = shopParts[2, selected+6];
+				thisRobot.robotPart[1, 3] = shopParts[5, selected+6];
+				thisRobot.robotPart[2, 3] = shopParts[3, selected+6];
+			}
+			break;
+			
+		case 4:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 5] = shopParts[2, selected+9];
+				thisRobot.robotPart[1, 5] = shopParts[5, selected+9];
+				thisRobot.robotPart[2, 5] = shopParts[3, selected+9];
+			}
+			break;
+			
+		case 5:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 3] = shopParts[2, selected+6];
+				thisRobot.robotPart[1, 3] = shopParts[5, selected+6];
+				thisRobot.robotPart[2, 3] = shopParts[3, selected+6];
+			}
+			break;
+			
+		case 6:
+			if(thisRobot.money >= shopParts[4, selected])
+			{
+				thisRobot.money -= shopParts[4, selected];
+				thisRobot.robotPart[0, 3] = shopParts[2, selected+9];
+				thisRobot.robotPart[1, 3] = shopParts[5, selected+9];
+				thisRobot.robotPart[2, 3] = shopParts[3, selected+9];
+			}
+			break;
+			
+			
+	}
 }
 
 draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 0.5);

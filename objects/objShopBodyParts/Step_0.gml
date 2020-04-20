@@ -1,31 +1,32 @@
 depth = -100;
 image_speed = 0;
+var thisRobot = instance_find(objPj, 0).id;
 
 if(image_index != 0)
 {
 	if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 860, 246, 1550, 351) && mouse_check_button_pressed(mb_left))
 	{
-		isSelected1 = true;
-		
-		isSelected2 = false;
-		
-		isSelected3 = false;
+		selected = 0
 	}
 	if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 860, 410, 1550, 531) && mouse_check_button_pressed(mb_left))
 	{
-		isSelected1 = false;
-		
-		isSelected2 = true;
-		
-		isSelected3 = false;
+		selected = 1;
 	}
 	if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 860, 574, 1550, 686) && mouse_check_button_pressed(mb_left))
 	{
-		isSelected1 = false;
+		selected = 2;
+	}
+	
+	if(selected != -1 && point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 1088, 859, 1550, 1420))
+	{
+		mouseOn = true;
 		
-		isSelected2 = false;
+		achat = mouse_check_button_pressed(mb_left);	
 		
-		isSelected3 = true;
+	}
+	else
+	{
+		mouseOn = false;
 	}
 
 }

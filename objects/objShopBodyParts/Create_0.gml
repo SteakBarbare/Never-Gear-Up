@@ -102,8 +102,10 @@ shopParts[5, 9] = "Suction";
 shopParts[5, 10] = "Default";
 shopParts[5, 11] = "Destroyer";
 
-isSelected1 = false;
-isSelected2 = false;
-isSelected3 = false;
+selected = -1;
+
+mouseOn = false;
+
+achat = false;
 
 
