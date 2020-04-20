@@ -24,7 +24,7 @@ if(activate)
 	   }
 	   else if (win)
 	   {
-		    
+		    activate = false;
 			room_goto(Workshop);
 	   }
 	}

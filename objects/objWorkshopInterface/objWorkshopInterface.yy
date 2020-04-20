@@ -2,7 +2,7 @@
     "id": "bf718444-4177-4048-8f1d-6e5ef2147c6d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objWorkshop",
+    "name": "objWorkshopInterface",
     "eventList": [
         {
             "id": "73b27a99-6408-4855-9d7a-fb03ce450268",
