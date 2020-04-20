@@ -9,6 +9,7 @@ switch(step)
 		var robotEnemy3 = instance_find(objEnemy, 3);
 	
 		playerRobot.depth = 100;
+		
 
 		mOnButton0 = point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 63, 61, 716, 473);
 		
@@ -84,6 +85,8 @@ switch(step)
 		break;
 		
 		case 1:
+			
+			playerRobot.depth = 1;
 		    playerRobot.image_xscale = 2;
 			playerRobot.image_yscale = 2;
 			playerRobot.x = 324;
@@ -91,10 +94,6 @@ switch(step)
 			opponentRobot.depth = 100;
 			
 			mOnButtonShop = point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 800, 855, 1126, 944);
-			show_debug_message("x")
-			show_debug_message(window_mouse_get_x())
-			show_debug_message("y")
-			show_debug_message(window_mouse_get_y())
 			
 			if(mOnButtonShop && mouse_check_button_pressed(mb_left))
 			{
@@ -105,6 +104,19 @@ switch(step)
 			
 			if(mOnButtonFight && mouse_check_button_pressed(mb_left))
 			{
+				playerRobot.x = 216;
+				playerRobot.xOrginal = 216;
+				playerRobot.y = 125;
+				playerRobot.yOriginal = 125;
+				opponentRobot.x = 431;
+				opponentRobot.xOriginal = 431;
+				opponentRobot.y = 125;
+				opponentRobot.yOriginal = 431;
+				opponentRobot.persistent = true;
+				opponentRobot.image_xscale = -1;
+				playerRobot.image_xscale = 1;
+				playerRobot.image_yscale = 1;
+				mOnButtonFight = false;
 				room_goto(Arena);
 			}
 			
