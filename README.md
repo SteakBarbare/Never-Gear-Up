@@ -1,7 +1,7 @@
 # Never-Gear-Up
  A robot fighting game where you have to keep your machine alive for the Ludum Dare 46 (made in 72h)
  
- ## How to contribuate
+ ## How to contribute
  - First create a new branch to work on
  - Branch name convention is ModifiedObject-Feature
  
