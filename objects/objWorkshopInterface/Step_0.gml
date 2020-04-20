@@ -42,7 +42,7 @@ switch(step)
 		mOnButtonValidate = point_in_rectangle(window_mouse_get_x()/3, window_mouse_get_y()/3, 530, 162, 627, 195)
 		
 		
-		if(mouse_check_button_pressed(mb_left) && mOnButtonValidate)
+		if(mouse_check_button_pressed(mb_left) && mOnButtonValidate && pickEnnemy != -1)
 		{
 			switch(pickEnnemy)
 			{
@@ -96,9 +96,8 @@ switch(step)
 			mOnButtonShop = point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 800, 855, 1126, 944);
 			
 			if(mOnButtonShop && mouse_check_button_pressed(mb_left))
-				step = 2;
 			{
-				
+				step = 2;
 			}
 			
 			mOnButtonFight = point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 1692, 434, 1895, 620);

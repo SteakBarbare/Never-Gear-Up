@@ -108,6 +108,7 @@ switch(step)
 		case 1:
 		
 			draw_sprite(sprWorkshopStatsMenu, 0, 0, 0);
+			draw_sprite(sprWorkshopStatsMenu, 1, 0, 0);
 			//head
 			if(playerRobot.robotPart[0, 0] < 10)
 			{
@@ -231,6 +232,7 @@ switch(step)
 			
 			if(!instance_exists(objShopBodyParts)){
 				instance_create_depth(0, 0, -100, objShopBodyParts);
+				
 			}
 			
 			

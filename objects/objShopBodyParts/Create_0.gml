@@ -13,13 +13,9 @@ shopParts[0, 6] = "Arm";
 shopParts[0, 7] = "Arm";
 shopParts[0, 8] = "Arm";
 
-shopParts[0, 9] = "Arm";
-shopParts[0, 10] = "Arm";
-shopParts[0, 11] = "Arm";
-
-shopParts[0, 12] = "Leg";
-shopParts[0, 13] = "Leg";
-shopParts[0, 14] = "Leg";
+shopParts[0, 9] = "Leg";
+shopParts[0, 10] = "Leg";
+shopParts[0, 11] = "Leg";
 
 // Shop Parts Tier
 shopParts[1, 0] = 1;
@@ -68,6 +64,10 @@ shopParts[3, 6] = 1;
 shopParts[3, 7] = 3;
 shopParts[3, 8] = 5;
 
+shopParts[3, 9] = 0.5;
+shopParts[3, 10] = 1;
+shopParts[3, 11] = 2;
+
 // Shop Parts Price
 shopParts[4, 0] = 100;
 shopParts[4, 1] = 500;
@@ -101,3 +101,9 @@ shopParts[5, 8] = "Destroyer";
 shopParts[5, 9] = "Suction";
 shopParts[5, 10] = "Default";
 shopParts[5, 11] = "Destroyer";
+
+isSelected1 = false;
+isSelected2 = false;
+isSelected3 = false;
+
+
