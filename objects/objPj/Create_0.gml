@@ -1,7 +1,10 @@
 event_inherited();
 srcSpineSetSlots(robotPart);
 
+var thisRobot = id;
+scrStatsUpdate(thisRobot);
 persistent = true;
+
 
 robotName = "PJ";
 

@@ -23,4 +23,9 @@ skeleton_animation_mix("Defense", "Idle", 0.3);
 //Death
 skeleton_animation_mix("Idle", "Death", 0.3);
 
+var thisRobot = id;
+scrStatsUpdate(thisRobot);
 robotName = "";
+
+robotN = "";
+robotT = "";

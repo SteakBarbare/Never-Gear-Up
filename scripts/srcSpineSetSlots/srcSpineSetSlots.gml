@@ -49,7 +49,7 @@ for(var part = 0; part < array_length_2d(robotParts, 1); part++){
 			case 1:
 				srcSpineChangeAttachment("Armor", "Armor " + robotParts[1, part]);
 				srcSpineChangeAttachment("Waist", "Waist " + robotParts[1, part]);
-				show_debug_message(robotParts[1, part]);
+				
 				break;
 				
 			case 2:
