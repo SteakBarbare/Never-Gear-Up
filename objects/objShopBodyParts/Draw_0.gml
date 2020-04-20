@@ -60,8 +60,7 @@ if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 474, 237, 612,
 		
 	}
 }
-show_debug_message(window_mouse_get_x());
-show_debug_message(window_mouse_get_y());
+
 
 switch(image_index)
 {
@@ -210,6 +209,7 @@ if(achat)
 				thisRobot.robotPart[0, 0] = shopParts[2, selected];
 				thisRobot.robotPart[1, 0] = shopParts[5, selected];
 				thisRobot.robotPart[2, 0] = shopParts[3, selected];
+				show_debug_message(thisRobot.robotPart[1, 0])
 			}
 			break;
 			
