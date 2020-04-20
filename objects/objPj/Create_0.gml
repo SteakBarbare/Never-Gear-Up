@@ -1,13 +1,12 @@
 event_inherited();
 srcSpineSetSlots(robotPart);
 
-robotName = "Player Robot Name";
 var thisRobot = id;
 scrStatsUpdate(thisRobot);
 persistent = true;
 
 
-robotName = "PJ";
+robotName = "Player Robot Name";
 
 skeleton_animation_set("Idle");
 
