@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "2ed6d04a-27d1-4b03-b888-9a7d5916ec72",
+            "Value": {
+                "id": "b1e62733-d319-44b0-9215-41e9cd1a9e3b",
+                "resourcePath": "sprites\\sprNPC2\\sprNPC2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2f04bf96-092a-4ae7-804e-07ca8a8073b4",
             "Value": {
                 "id": "986d8539-605a-4de4-bb2d-399d9e38dd8e",
@@ -308,6 +316,14 @@
                 "id": "0b2eb938-b698-4242-9d0a-34e308778458",
                 "resourcePath": "views\\3c1bd564-afea-42e0-a9eb-bf64c16f2962.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "42967cfa-78cc-4648-8ec1-eaaac029fe31",
+            "Value": {
+                "id": "c1e9e2b0-8552-49cf-a0f1-8846ed3af946",
+                "resourcePath": "sprites\\sprNPC1\\sprNPC1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -775,6 +791,14 @@
             }
         },
         {
+            "Key": "cb4e425e-19f2-4d23-96c8-829277457769",
+            "Value": {
+                "id": "7c43f396-49b8-4e93-9640-0aa1b0df3b06",
+                "resourcePath": "sprites\\CortalDuFrigo\\CortalDuFrigo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "ea604190-9c9d-4f43-9fda-1b5a2182fb39",
@@ -836,6 +860,14 @@
                 "id": "dc42e9a4-01df-4618-a450-82c59551c896",
                 "resourcePath": "sounds\\sndBlock2\\sndBlock2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e58179d6-5e36-48d9-9356-644d2f010044",
+            "Value": {
+                "id": "9a71feaa-242d-438a-bd36-e3963de44e7a",
+                "resourcePath": "objects\\objBackgroundNPC\\objBackgroundNPC.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -924,6 +956,14 @@
                 "id": "669a80a9-86e3-44b6-96b1-59d9b162fd32",
                 "resourcePath": "views\\f82825c4-6d66-483f-a9d6-fbed2321a890.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f83df408-461c-4041-8e31-6e9f021d3e26",
+            "Value": {
+                "id": "5dcc3f45-6774-4e08-9d39-f52e01ae854e",
+                "resourcePath": "sprites\\sprNPC3\\sprNPC3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
