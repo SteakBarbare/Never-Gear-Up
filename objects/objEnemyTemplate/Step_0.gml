@@ -68,6 +68,9 @@ if(activate)
 				}
 				else if (robotLife <= 0)
 				{
+					if(!opponentRobot.win){
+						audio_play_sound(sndDeath, 10, false);
+					}
 					opponentRobot.win = true;
 					robotLife = 0;
 				}
@@ -99,6 +102,8 @@ if(activate)
 						opponentRobot.robotNewLife = opponentRobot.robotLife;
 						robotNewTimer = turnTimer;
 						update = true;
+						
+						audio_play_sound(asset_get_index("sndSlash" + string(irandom(4))), 5, false);
 						var sound = irandom(2);
 						switch(sound)
 						{
@@ -145,3 +150,5 @@ if(robotLife / robotLifeMax <= 0.5 && !dead){
 		alarm[0] = irandom(room_speed*2);
 	}
 }
+
+depth = -y;

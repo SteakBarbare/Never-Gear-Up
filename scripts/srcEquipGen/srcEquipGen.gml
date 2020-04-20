@@ -26,6 +26,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultName = "Default"
 			var defaultBoost = 15;
 			
+			//Armored tier
+			var armoredLife = 40;
+			var armoredName = "Armored"
+			var armoredBoost = 18;
+			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
@@ -43,6 +48,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultLife = 60;
 			var defaultName = "Default"
 			var defaultBoost = 15;
+			
+			//Armored tier
+			var armoredLife = 80;
+			var armoredName = "Armored"
+			var armoredBoost = 18;
 			
 			//destroyer tier
 			var destroyerLife = 100;
@@ -62,6 +72,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultName = "Default"
 			var defaultBoost = 3;
 			
+			//Armored tier
+			var armoredLife = 40;
+			var armoredName = "Armored"
+			var armoredBoost = 4;
+			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
@@ -79,6 +94,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 3;
+			
+			//Armored tier
+			var armoredLife = 40;
+			var armoredName = "Armored"
+			var armoredBoost = 4;
 			
 			//destroyer tier
 			var destroyerLife = 50;
@@ -98,6 +118,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultName = "Default"
 			var defaultBoost = 1;
 			
+			//Armored tier
+			var armoredLife = 40;
+			var armoredName = "Armored"
+			var armoredBoost = 2;
+			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
@@ -116,6 +141,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			var defaultName = "Default"
 			var defaultBoost = 1;
 			
+			//Armored tier
+			var armoredLife = 40;
+			var armoredName = "Armored"
+			var armoredBoost = 2;
+			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
@@ -123,17 +153,21 @@ for(compteur = 0; compteur < 6; compteur++)
 			
 		break;	
 	}
-	if(dice <= 60)
+	if(dice <= 30)
 	{
 		dice = 0;
 	}
-	else if(dice <= 90)
+	else if(dice <= 60)
 	{
 		dice = 1;
 	}
-	else
+	else if(dice <= 90)
 	{
 		dice = 2;
+	}
+	else
+	{
+		dice = 3;
 	}
 	
 	switch(dice)
@@ -152,6 +186,11 @@ for(compteur = 0; compteur < 6; compteur++)
 			break;
 		
 		case 2:
+			robot.robotPart[0, compteur] = armoredLife;
+			robot.robotPart[1, compteur] = armoredName;
+			robot.robotPart[2, compteur] = armoredBoost;
+			break;
+		case 3:
 			robot.robotPart[0, compteur] = destroyerLife;
 			robot.robotPart[1, compteur] = destroyerName;
 			robot.robotPart[2, compteur] = destroyerBoost;

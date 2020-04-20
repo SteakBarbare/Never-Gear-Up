@@ -7,7 +7,7 @@ robotDodge = 30;
 robotDamage = 15;
 dead = false;
 
-
+persistent = true;
 
 
 
