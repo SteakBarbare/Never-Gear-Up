@@ -19,7 +19,7 @@ diceDodge = 0;
 
 activate = false;
 
-xOriginal = x;
+xOriginal = 216;
 
 damage = false;
 
@@ -61,16 +61,21 @@ robotPart[1, 5] = "Destroyer"; // leftLeg
 
 robotPart[2, 0] = 20; // Head
 robotPart[2, 1] = 20; // Body
-robotPart[2, 2] = 5; // rightArm
-robotPart[2, 3] = 5; // leftArm
+robotPart[2, 2] = 50; // rightArm
+robotPart[2, 3] = 50; // leftArm
 robotPart[2, 4] = 2; // rightLeg
 robotPart[2, 5] = 2; // leftLeg
+
+
 
 //life calcul
 robotLifeMax = 100 + robotPart[0, 0]/2 + robotPart[0, 1]/2 + robotPart[0, 2]/2 + robotPart[0, 3]/2 + robotPart[0, 4]/2 + robotPart[0, 5]/2;
 robotLife = robotLifeMax;
 robotNewLife = robotLife;
 
+var thisRobot = instance_find(objPj, 0).id;
+
+scrStatsUpdate(thisRobot)
 
 //Turn Var
 turnMaxTimer = room_speed * 3;
@@ -88,6 +93,3 @@ isCritical = false;
 // Fx Var
 fxGenerated = false;
 flash = 0;
-var thisRobot = instance_find(objPj, 0).id;
-
-scrStatsUpdate(thisRobot)

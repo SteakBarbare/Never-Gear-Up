@@ -1,4 +1,3 @@
-currentState = 0;
 step = 0;
 
 pickEnnemy = -1;
@@ -17,4 +16,3 @@ if(!instance_exists(objPj))
 }
 playerRobot = instance_find(objPj, 0).id;
 
-createEnemy = false;

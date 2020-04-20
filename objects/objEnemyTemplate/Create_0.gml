@@ -17,7 +17,7 @@ update = false;
 
 activate = false;
 
-xOriginal = x;
+xOriginal = 431;
 
 damage = false;
 

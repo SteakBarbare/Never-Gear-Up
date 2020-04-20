@@ -24,8 +24,12 @@ if(activate)
 	   }
 	   else if (win)
 	   {
-		    activate = false;
-			room_goto(Workshop);
+		   combat = false;
+		   activate = false;
+		   thisRobot.activate = false;
+		   var enemy = instance_find(objEnemy, 0).id;
+		   instance_destroy(enemy);
+		   room_goto(Workshop);
 	   }
 	}
 	#endregion
@@ -140,6 +144,7 @@ if(activate)
 				}
 				else if(image_index >= 19)
 				{
+					show_debug_message(xOriginal);
 					x = xOriginal; //replace the player robots
 					hsp = 0; 
 					opponentRobot.x += 2;
@@ -154,12 +159,13 @@ if(activate)
 		}
 	}
 	#endregion
-}
 
-if(robotLife / robotLifeMax <= 0.5 && !dead){
-	if(alarm[0] <= -1){
-		alarm[0] = irandom(room_speed*2);
+
+	if(robotLife / robotLifeMax <= 0.5 && !dead){
+		if(alarm[0] <= -1){
+			alarm[0] = irandom(room_speed*2);
+		}
 	}
-}
 
-depth = -y;
+	depth = -y;
+}
