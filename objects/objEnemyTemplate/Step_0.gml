@@ -150,3 +150,5 @@ if(robotLife / robotLifeMax <= 0.5 && !dead){
 		alarm[0] = irandom(room_speed*2);
 	}
 }
+
+depth = -y;
