@@ -110,6 +110,8 @@ switch(step)
 				playerRobot.yOriginal = 125;
 				playerRobot.dead = false;
 				playerRobot.win = false;
+				playerRobot.robotLife = playerRobot.robotLifeMax;
+				playerRobot.robotNewLife = playerRobot.robotLifeMax;
 				opponentRobot.x = 431;
 				opponentRobot.xOriginal = 431;
 				opponentRobot.y = 125;
@@ -123,8 +125,12 @@ switch(step)
 				room_goto(Arena);
 			}
 			
+			break;
 			
+			
+		case 2:
 			
 		
+			break;
 		
 }

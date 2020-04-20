@@ -20,21 +20,25 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 20;
 			var junkName = "Pan";
 			var junkBoost = 10;
+			var junkMaxLife = 20;
 			
 			//default tier
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 15;
+			var defaultMaxLife = 30;
 			
 			//Armored tier
 			var armoredLife = 40;
 			var armoredName = "Armored"
 			var armoredBoost = 18;
+			var armoredMaxLife = 40;
 			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 20;
+			var destroyerMaxLife = 50;
 			
 			break;
 			
@@ -43,6 +47,7 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 40;
 			var junkName = "Trash";
 			var junkBoost = 10;
+			var junkMaxLife = 40;
 			
 			//default tier
 			var defaultLife = 60;
@@ -53,11 +58,13 @@ for(compteur = 0; compteur < 6; compteur++)
 			var armoredLife = 80;
 			var armoredName = "Armored"
 			var armoredBoost = 18;
+			var armoredMaxLife = 80;
 			
 			//destroyer tier
 			var destroyerLife = 100;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 20;
+			var destroyerMaxLife = 100;
 			
 			break;
 			
@@ -66,21 +73,25 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 20;
 			var junkName = "Spatula";
 			var junkBoost = 1;
+			var junkMaxLife = 20;
 			
 			//default tier
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 3;
+			var defaultMaxLife = 30;
 			
 			//Armored tier
 			var armoredLife = 40;
 			var armoredName = "Armored"
 			var armoredBoost = 4;
+			var armoredMaxLife = 40;
 			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 5;
+			var destroyerMaxLife = 50;
 			
 			break;
 			
@@ -89,21 +100,25 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 20;
 			var junkName = "Spatula";
 			var junkBoost = 1;
+			var junkMaxLife = 20;
 			
 			//default tier
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 3;
+			var defaultMaxLife = 30;
 			
 			//Armored tier
 			var armoredLife = 40;
 			var armoredName = "Armored"
 			var armoredBoost = 4;
+			var armoredMaxLife = 40;
 			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 5;
+			var destroyerMaxLife = 50;
 			
 			break;
 			
@@ -112,21 +127,25 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 20;
 			var junkName = "Suction";
 			var junkBoost = 0.5;
+			var junkMaxLife = 20;
 			
 			//default tier
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 1;
+			var defaultMaxLife = 30;
 			
 			//Armored tier
 			var armoredLife = 40;
 			var armoredName = "Armored"
 			var armoredBoost = 2;
+			var armoredMaxLife = 40;
 			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 2;
+			var destroyerMaxLife = 50;
 			
 			break;
 			
@@ -135,21 +154,25 @@ for(compteur = 0; compteur < 6; compteur++)
 			var junkLife = 20;
 			var junkName = "Suction";
 			var junkBoost = 0.5;
+			var junkMaxLife = 20;
 			
 			//default tier
 			var defaultLife = 30;
 			var defaultName = "Default"
 			var defaultBoost = 1;
+			var defaultMaxLife = 30;
 			
 			//Armored tier
 			var armoredLife = 40;
 			var armoredName = "Armored"
 			var armoredBoost = 2;
+			var armoredMaxLife = 40;
 			
 			//destroyer tier
 			var destroyerLife = 50;
 			var destroyerName = "Destroyer";
 			var destroyerBoost = 2;
+			var destroyerMaxLife = 50;
 			
 		break;	
 	}
@@ -177,25 +200,28 @@ for(compteur = 0; compteur < 6; compteur++)
 			robot.robotPart[0, compteur] = junkLife;
 			robot.robotPart[1, compteur] = junkName;
 			robot.robotPart[2, compteur] = junkBoost;
+			robot.robotPart[3, compteur] = junkMaxLife;
 			break;
 			
 		case 1:
 			robot.robotPart[0, compteur] = defaultLife;
 			robot.robotPart[1, compteur] = defaultName;
 			robot.robotPart[2, compteur] = defaultBoost;
+			robot.robotPart[3, compteur] = defaultMaxLife;
 			break;
 		
 		case 2:
 			robot.robotPart[0, compteur] = armoredLife;
 			robot.robotPart[1, compteur] = armoredName;
 			robot.robotPart[2, compteur] = armoredBoost;
+			robot.robotPart[3, compteur] = armoredMaxLife;
 			break;
 		case 3:
 			robot.robotPart[0, compteur] = destroyerLife;
 			robot.robotPart[1, compteur] = destroyerName;
 			robot.robotPart[2, compteur] = destroyerBoost;
-			break;
-			
+			robot.robotPart[3, compteur] = destroyerMaxLife;
+			break;	
 	}
 }
 

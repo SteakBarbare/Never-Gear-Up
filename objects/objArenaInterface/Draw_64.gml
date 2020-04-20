@@ -6,11 +6,15 @@ if(instance_exists(objPj))
 	var playerRobot = instance_find(objPj, 0).id;
 	if(playerRobot.robotLife <= 0)
 	{
-		draw_text(300, 300, "you lose")	;
+		draw_set_halign(fa_center);
+		draw_text(room_width/2, 50, "you lose");
+		draw_set_halign(fa_left);
 	}
 	else if(playerRobot.win)
 	{
-		draw_text(300, 300, "you win, press space !")	;
+		draw_set_halign(fa_center);
+		draw_text(room_width/2, 50, "you win, press space !");
+		draw_set_halign(fa_left);
 	}
 	if(!playerRobot.combat)
 	{

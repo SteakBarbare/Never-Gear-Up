@@ -14,6 +14,7 @@ switch(part)
 			robot.robotPart[0, 0] = 0;
 			robot.robotPart[1, 0] = "Broken";		
 			robot.robotPart[2, 0] = 0;
+			robot.robotPart[3, 0] = 0;
 			break;
 			
 		
@@ -22,14 +23,15 @@ switch(part)
 			robot.robotPart[0, 1] = 0;
 			robot.robotPart[1, 1] = "Broken";
 			robot.robotPart[2, 1] = 0;
+			robot.robotPart[3, 1] = 0;
 			break;
 		
 		//rightArm
 		case 2:
 			robot.robotPart[0, 2] = 0;
 			robot.robotPart[1, 2] = "Broken";
-
 			robot.robotPart[2, 2] = 0;
+			robot.robotPart[3, 2] = 0;
 			break;
 		
 		//leftArm
@@ -37,6 +39,7 @@ switch(part)
 			robot.robotPart[0, 3] = 0;
 			robot.robotPart[1, 3] = "Broken";
 			robot.robotPart[2, 3] = 0;
+			robot.robotPart[3, 3] = 0;
 			break;
 		
 		//rightLeg
@@ -44,6 +47,7 @@ switch(part)
 			robot.robotPart[0, 4] = 0;
 			robot.robotPart[1, 4] = "Broken";
 			robot.robotPart[2, 4] = 0;
+			robot.robotPart[3, 4] = 0;
 			break;
 			
 		//rightLeg
@@ -51,9 +55,8 @@ switch(part)
 			robot.robotPart[0, 5] = 0;
 			robot.robotPart[1, 5] = "Broken";
 			robot.robotPart[2, 5] = 0;
-
+			robot.robotPart[3, 5] = 0;
 			break;
-
-
-
 }
+
+robot.robotLifeMax = 100 + robot.robotPart[3, 0]/2 + robot.robotPart[3, 1]/2 + robot.robotPart[3, 2]/2 + robot.robotPart[3, 3]/2 + robot.robotPart[3, 4]/2 + robot.robotPart[3, 5]/2;
