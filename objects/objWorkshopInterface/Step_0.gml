@@ -108,10 +108,13 @@ switch(step)
 				playerRobot.xOrginal = 216;
 				playerRobot.y = 125;
 				playerRobot.yOriginal = 125;
+				playerRobot.dead = false;
+				playerRobot.win = false;
 				opponentRobot.x = 431;
 				opponentRobot.xOriginal = 431;
 				opponentRobot.y = 125;
 				opponentRobot.yOriginal = 431;
+				opponentRobot.dead = false;
 				opponentRobot.persistent = true;
 				opponentRobot.image_xscale = -1;
 				playerRobot.image_xscale = 1;

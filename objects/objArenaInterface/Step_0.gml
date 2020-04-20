@@ -6,4 +6,3 @@ if(ini)
 	iniRobotSpeed = playerRobot.robotSpeed;
 	ini = false;
 }
-	

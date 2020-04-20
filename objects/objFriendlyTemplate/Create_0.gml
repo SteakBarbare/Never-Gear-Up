@@ -61,8 +61,8 @@ robotPart[1, 5] = "Destroyer"; // leftLeg
 
 robotPart[2, 0] = 20; // Head
 robotPart[2, 1] = 20; // Body
-robotPart[2, 2] = 5; // rightArm
-robotPart[2, 3] = 5; // leftArm
+robotPart[2, 2] = 50; // rightArm
+robotPart[2, 3] = 50; // leftArm
 robotPart[2, 4] = 2; // rightLeg
 robotPart[2, 5] = 2; // leftLeg
 
