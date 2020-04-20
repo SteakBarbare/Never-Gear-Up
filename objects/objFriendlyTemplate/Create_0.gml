@@ -19,7 +19,7 @@ diceDodge = 0;
 
 activate = false;
 
-xOriginal = x;
+xOriginal = 216;
 
 damage = false;
 
@@ -66,10 +66,18 @@ robotPart[2, 3] = 5; // leftArm
 robotPart[2, 4] = 2; // rightLeg
 robotPart[2, 5] = 2; // leftLeg
 
+//Life Parts --- 3 = Max Life
+robotPart[3, 0] = 20; // Head
+robotPart[3, 1] = 40; // Body
+robotPart[3, 2] = 30; // rightArm
+robotPart[3, 3] = 30; // leftArm
+robotPart[3, 4] = 30; // rightLeg
+robotPart[3, 5] = 30; // leftLeg
+
 
 
 //life calcul
-robotLifeMax = 100 + robotPart[0, 0]/2 + robotPart[0, 1]/2 + robotPart[0, 2]/2 + robotPart[0, 3]/2 + robotPart[0, 4]/2 + robotPart[0, 5]/2;
+robotLifeMax = 100 + robotPart[3, 0]/2 + robotPart[3, 1]/2 + robotPart[3, 2]/2 + robotPart[3, 3]/2 + robotPart[3, 4]/2 + robotPart[3, 5]/2;
 robotLife = robotLifeMax;
 robotNewLife = robotLife;
 
@@ -86,7 +94,13 @@ isActive = false;
 //Combat Var
 win = false;
 isBroken = false;
+targetedPart = 0;
+damageTaken = 0;
+isCritical = false;
 
 // Fx Var
 fxGenerated = false;
 flash = 0;
+
+// Shop Var
+money = 100;

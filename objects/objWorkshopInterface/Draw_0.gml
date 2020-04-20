@@ -24,6 +24,7 @@ switch(step)
 		draw_text_transformed_color(90, 76, string(robotEnemy0.robotSpeed), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(90, 93, string(robotEnemy0.robotDamage), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(90, 112, string(robotEnemy0.robotDodge), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+		draw_text_transformed_color(90, 130, string(robotEnemy0.bounty), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		
 		
 		//name e1
@@ -35,7 +36,7 @@ switch(step)
 		draw_text_transformed_color(363, 76, string(robotEnemy1.robotSpeed), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(363, 93, string(robotEnemy1.robotDamage), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(363, 112, string(robotEnemy1.robotDodge), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
-		
+		draw_text_transformed_color(363, 130, string(robotEnemy1.bounty), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		
 		//name e2
 		draw_text_transformed_color(27, 204, robotEnemy2.robotN, 1, 1, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
@@ -46,7 +47,8 @@ switch(step)
 		draw_text_transformed_color(90, 255, string(robotEnemy2.robotSpeed), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(90, 273, string(robotEnemy2.robotDamage), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(90, 290, string(robotEnemy2.robotDodge), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
-		
+		draw_text_transformed_color(90, 305, string(robotEnemy2.bounty), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+				
 		//name e3
 		draw_text_transformed_color(300, 204, robotEnemy3.robotN, 1, 1, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(297, 219, chr(34) + robotEnemy3.robotT + chr(34), 0.8, 0.8, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
@@ -56,6 +58,8 @@ switch(step)
 		draw_text_transformed_color(363, 255, string(robotEnemy3.robotSpeed), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(363, 273, string(robotEnemy3.robotDamage), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
 		draw_text_transformed_color(363, 290, string(robotEnemy3.robotDodge), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+		draw_text_transformed_color(363, 305, string(robotEnemy3.bounty), 0.7, 0.7, 0, colorGreen, colorGreen, colorGreen, colorGreen, 1);
+		
 		
 		if(mOnButton0)
 		{
@@ -220,15 +224,23 @@ switch(step)
 			}
 			
 			break;
-			
-			
-			
-			
-			
-			
-			
-			
 		
-		
-	
+		// Shop Draw
+		case 2:
+			draw_sprite(sprShopBackground, 0, 0, 0);
+			
+			if(!instance_exists(objShopBodyParts)){
+				instance_create_depth(0, 0, -100, objShopBodyParts);
+			}
+			
+			
+			playerRobot.x = room_width * 0.27;
+			playerRobot.y = room_height * 0.45;
+			
+			draw_text(room_width * 0.2, 48, "Money: "  + string(playerRobot.money));
+			
+			opponentRobot.image_alpha = 0;
+			
+			break;
+			
 }

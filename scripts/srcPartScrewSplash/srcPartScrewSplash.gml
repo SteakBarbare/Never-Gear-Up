@@ -39,6 +39,7 @@ part_type_gravity(global.screwParticle, 0.05, 270);
 part_type_life(global.screwParticle, 100, 200);
 #endregion
 
+#region Fog Particle
 global.fogParticle = part_type_create();
 
 part_type_shape(global.fogParticle, pt_shape_smoke);
@@ -52,3 +53,20 @@ part_type_alpha3(global.fogParticle, 0.025, 0.030, 0.035);
 part_type_color3(global.fogParticle, c_white, c_gray, c_dkgray);
 
 part_type_life(global.fogParticle, 400, 600);
+#endregion
+
+#region Fire Particle
+global.fireParticle = part_type_create();
+
+part_type_shape(global.fireParticle, pt_shape_flare);
+part_type_size(global.fireParticle, 0.1, 0.25, 0.002, 0);
+part_type_orientation(global.fireParticle, 0, 359, 0, 0, 0);
+part_type_speed(global.fireParticle,-0.4,0.4,0,0);
+part_type_direction(global.fireParticle,0,359,0,0);
+	
+part_type_blend(global.fireParticle, 1);
+part_type_alpha3(global.fireParticle, 0.555, 5.080, 0.585);
+part_type_color3(global.fireParticle, c_white, c_yellow, c_red);
+
+part_type_life(global.fireParticle, 40, 80);
+#endregion

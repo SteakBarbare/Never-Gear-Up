@@ -6,7 +6,7 @@ scrStatsUpdate(thisRobot);
 persistent = true;
 
 
-robotName = "PJ";
+robotName = "Player Robot Name";
 
 skeleton_animation_set("Idle");
 

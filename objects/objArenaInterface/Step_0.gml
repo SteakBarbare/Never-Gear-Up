@@ -4,6 +4,6 @@ if(ini)
 	iniRobotDamage = playerRobot.robotDamage;
 	iniRobotDodge = playerRobot.robotDodge;
 	iniRobotSpeed = playerRobot.robotSpeed;
+	
 	ini = false;
 }
-	

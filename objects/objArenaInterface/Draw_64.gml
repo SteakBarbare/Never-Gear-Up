@@ -6,15 +6,21 @@ if(instance_exists(objPj))
 	var playerRobot = instance_find(objPj, 0).id;
 	if(playerRobot.robotLife <= 0)
 	{
-		draw_text(300, 300, "you lose")	;
+		draw_set_halign(fa_center);
+		draw_text(room_width/2, 50, "you lose");
+		draw_set_halign(fa_left);
 	}
 	else if(playerRobot.win)
 	{
-		draw_text(300, 300, "you win, press space !")	;
+		draw_set_halign(fa_center);
+		draw_text(room_width/2, 50, "you win, press space !");
+		draw_set_halign(fa_left);
 	}
 	if(!playerRobot.combat)
 	{
-		draw_text(160, 150, "appuyez sur espace pour reprendre");
+		draw_set_halign(fa_center);
+		draw_text(room_width/2, 50, "Press Space to begin the fight");
+		draw_set_halign(fa_left);
 	}
 
 
@@ -131,8 +137,12 @@ if(instance_exists(objPj))
 if(instance_exists(objEnemy))
 {
 	var EnemyRobot = instance_find(objEnemy, 0).id;
-	draw_text(200, 170, EnemyRobot.robotName);
-
+	
+	draw_set_halign(fa_center);
+	draw_text_ext(room_width*2/3, 165, EnemyRobot.robotName, 20, 200);
+	draw_text_ext(room_width*0.3, 165, playerRobot.robotName, 20, 200);
+	draw_set_halign(fa_left);
+	
 	//speedBar
 	draw_healthbar(373, 19, 517, 10, (EnemyRobot.robotNewTimer/180)*100, c_black, c_aqua, c_aqua, 1, true, true)
 	draw_healthbar(416, 40, 518, 28, (EnemyRobot.robotNewLife/EnemyRobot.robotLifeMax)*100, c_black, c_red, c_green, 1, true, true) // vie

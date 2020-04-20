@@ -96,6 +96,7 @@ switch(step)
 			mOnButtonShop = point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 800, 855, 1126, 944);
 			
 			if(mOnButtonShop && mouse_check_button_pressed(mb_left))
+				step = 2;
 			{
 				
 			}
@@ -108,10 +109,16 @@ switch(step)
 				playerRobot.xOrginal = 216;
 				playerRobot.y = 125;
 				playerRobot.yOriginal = 125;
+				playerRobot.dead = false;
+				playerRobot.win = false;
+				playerRobot.robotLife = playerRobot.robotLifeMax;
+				playerRobot.robotNewLife = playerRobot.robotLifeMax;
+				opponentRobot.image_alpha = 1;
 				opponentRobot.x = 431;
 				opponentRobot.xOriginal = 431;
 				opponentRobot.y = 125;
 				opponentRobot.yOriginal = 431;
+				opponentRobot.dead = false;
 				opponentRobot.persistent = true;
 				opponentRobot.image_xscale = -1;
 				playerRobot.image_xscale = 1;
@@ -120,8 +127,12 @@ switch(step)
 				room_goto(Arena);
 			}
 			
+			break;
 			
+			
+		case 2:
 			
 		
+			break;
 		
 }

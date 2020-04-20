@@ -15,14 +15,16 @@ activeRobot.turnTimer = 0;
 
 Dodge = irandom(100 );
 
-
+targetPart = irandom(5);
+opponent.targetedPart = targetPart;
 if(Dodge > opponent.robotDodge)
 {
-	targetPart = irandom(5);
 	if(opponent.robotPart[0, targetPart] > 0)
 	{
 		opponent.robotPart[0, targetPart] -= activeRobot.robotDamage;
 		opponent.robotLife -= activeRobot.robotDamage;
+		opponent.damageTaken = activeRobot.robotDamage;
+		opponent.isCritical = false;
 		
 		if(opponent.robotPart[0, targetPart] <= 0)
 		{
@@ -35,6 +37,8 @@ if(Dodge > opponent.robotDodge)
 	else 
 	{
 		opponent.robotLife -= activeRobot.robotDamage * 1.5;
+		opponent.damageTaken = round(activeRobot.robotDamage * 1.5);
+		opponent.isCritical = true;
 	}
 
 	

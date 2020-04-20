@@ -1,0 +1,391 @@
+
+Character Concept.png
+size: 1024,32
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Armor Armored
+  rotate: false
+  xy: 36, 7
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1
+Armor Broken
+  rotate: true
+  xy: 116, 11
+  size: 21, 23
+  orig: 21, 23
+  offset: 0, 0
+  index: -1
+Armor Default
+  rotate: false
+  xy: 63, 7
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+Armor Destroyer
+  rotate: true
+  xy: 0, 2
+  size: 30, 36
+  orig: 30, 36
+  offset: 0, 0
+  index: -1
+Armor Trash
+  rotate: true
+  xy: 89, 10
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+Head Armored
+  rotate: true
+  xy: 353, 14
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+Head Broken
+  rotate: false
+  xy: 439, 0
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Head Default
+  rotate: true
+  xy: 415, 16
+  size: 16, 20
+  orig: 16, 20
+  offset: 0, 0
+  index: -1
+Head Destroyer
+  rotate: true
+  xy: 211, 0
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+Head Pan
+  rotate: false
+  xy: 139, 11
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+Left Arm Armored
+  rotate: true
+  xy: 116, 0
+  size: 11, 24
+  orig: 11, 24
+  offset: 0, 0
+  index: -1
+Left Arm Broken
+  rotate: true
+  xy: 140, 0
+  size: 11, 23
+  orig: 11, 23
+  offset: 0, 0
+  index: -1
+Left Arm Default
+  rotate: true
+  xy: 497, 21
+  size: 11, 23
+  orig: 11, 23
+  offset: 0, 0
+  index: -1
+Left Arm Destroyer
+  rotate: true
+  xy: 185, 15
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+Left Arm Spatula
+  rotate: true
+  xy: 520, 21
+  size: 11, 23
+  orig: 11, 23
+  offset: 0, 0
+  index: -1
+Left Foot Armored
+  rotate: true
+  xy: 89, 0
+  size: 10, 20
+  orig: 10, 20
+  offset: 0, 0
+  index: -1
+Left Foot Broken
+  rotate: true
+  xy: 563, 22
+  size: 10, 20
+  orig: 10, 20
+  offset: 0, 0
+  index: -1
+Left Foot Default
+  rotate: true
+  xy: 583, 22
+  size: 10, 20
+  orig: 10, 20
+  offset: 0, 0
+  index: -1
+Left Foot Destroyer
+  rotate: true
+  xy: 543, 21
+  size: 11, 20
+  orig: 11, 20
+  offset: 0, 0
+  index: -1
+Left Foot Suction
+  rotate: true
+  xy: 163, 0
+  size: 12, 20
+  orig: 12, 20
+  offset: 0, 0
+  index: -1
+Left Hand Armored
+  rotate: true
+  xy: 235, 0
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+Left Hand Broken
+  rotate: true
+  xy: 660, 17
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Left Hand Default
+  rotate: true
+  xy: 258, 0
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+Left Hand Destroyer
+  rotate: true
+  xy: 259, 15
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+Left Hand Spatula
+  rotate: false
+  xy: 302, 15
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+Left Leg Armored
+  rotate: true
+  xy: 282, 15
+  size: 17, 20
+  orig: 17, 20
+  offset: 0, 0
+  index: -1
+Left Leg Broken
+  rotate: true
+  xy: 185, 0
+  size: 15, 20
+  orig: 15, 20
+  offset: 0, 0
+  index: -1
+Left Leg Default
+  rotate: true
+  xy: 419, 0
+  size: 16, 20
+  orig: 16, 20
+  offset: 0, 0
+  index: -1
+Left Leg Destroyer
+  rotate: true
+  xy: 236, 16
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+Left Leg Suction
+  rotate: true
+  xy: 475, 18
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+Right Arm Armored
+  rotate: true
+  xy: 277, 0
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+Right Arm Broken
+  rotate: false
+  xy: 295, 0
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+Right Arm Default
+  rotate: false
+  xy: 692, 17
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+Right Arm Destroyer
+  rotate: true
+  xy: 435, 16
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+Right Arm Spatula
+  rotate: false
+  xy: 676, 17
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+Right Foot Armored
+  rotate: true
+  xy: 373, 16
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Right Foot Broken
+  rotate: true
+  xy: 377, 0
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Right Foot Default
+  rotate: true
+  xy: 394, 16
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Right Foot Destroyer
+  rotate: true
+  xy: 318, 13
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+Right Foot Suction
+  rotate: true
+  xy: 398, 0
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Right Hand Armored
+  rotate: true
+  xy: 161, 12
+  size: 20, 24
+  orig: 20, 24
+  offset: 0, 0
+  index: -1
+Right Hand Broken
+  rotate: true
+  xy: 707, 21
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+Right Hand Default
+  rotate: true
+  xy: 452, 18
+  size: 14, 23
+  orig: 14, 23
+  offset: 0, 0
+  index: -1
+Right Hand Destroyer
+  rotate: true
+  xy: 211, 16
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+Right Hand Spatula
+  rotate: false
+  xy: 339, 13
+  size: 14, 19
+  orig: 14, 19
+  offset: 0, 0
+  index: -1
+Right Leg Armored
+  rotate: true
+  xy: 603, 18
+  size: 14, 19
+  orig: 14, 19
+  offset: 0, 0
+  index: -1
+Right Leg Broken
+  rotate: true
+  xy: 622, 19
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+Right Leg Default
+  rotate: true
+  xy: 641, 19
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+Right Leg Destroyer
+  rotate: true
+  xy: 312, 0
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Right Leg Suction
+  rotate: true
+  xy: 332, 0
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Waist Armored
+  rotate: true
+  xy: 454, 0
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+Waist Broken
+  rotate: false
+  xy: 738, 19
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+Waist Default
+  rotate: false
+  xy: 724, 19
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+Waist Destroyer
+  rotate: false
+  xy: 468, 4
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Waist Trash
+  rotate: false
+  xy: 353, 0
+  size: 24, 14
+  orig: 24, 14
+  offset: 0, 0
+  index: -1

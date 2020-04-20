@@ -24,11 +24,12 @@ if(activate)
 	   }
 	   else if (win)
 	   {
-		    activate = false;
-			thisRobot.activate = false;
-			var enemy = instance_find(objEnemy, 0).id;
-			instance_destroy(enemy);
-			room_goto(Workshop);
+		   combat = false;
+		   activate = false;
+		   thisRobot.activate = false;
+		   var enemy = instance_find(objEnemy, 0).id;
+		   instance_destroy(enemy);
+		   room_goto(Workshop);
 	   }
 	}
 	#endregion
@@ -168,3 +169,4 @@ if(activate)
 
 	depth = -y;
 }
+

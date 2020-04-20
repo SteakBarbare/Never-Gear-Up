@@ -9,7 +9,8 @@
         "d4680d6c-6bd4-4041-a702-fc42cddaff21",
         "674e0d40-a5c2-4c08-9652-392f0ce46cda",
         "c5717a82-1e3c-40f5-9cbd-09ad48327f57",
-        "c4b8effd-b90c-492e-91cf-f7b82894b927"
+        "c4b8effd-b90c-492e-91cf-f7b82894b927",
+        "2fde56f3-ebc7-4d3d-87f4-8f6879404c04"
     ],
     "filterType": "GMSprite",
     "folderName": "Workshop",
