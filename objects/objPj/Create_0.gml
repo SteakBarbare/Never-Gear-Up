@@ -1,6 +1,8 @@
 event_inherited();
 srcSpineSetSlots(robotPart);
 
+persistent = true;
+
 robotName = "PJ";
 
 skeleton_animation_set("Idle");
