@@ -92,6 +92,7 @@ if(activate)
 	{
 		if(bounty > 0){
 			opponentRobot.money += bounty;
+			opponentRobot.totalMoney += bounty;
 			bounty = 0;
 		}
 		v = 0;

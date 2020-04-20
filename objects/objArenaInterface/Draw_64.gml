@@ -7,7 +7,7 @@ if(instance_exists(objPj))
 	if(playerRobot.robotLife <= 0)
 	{
 		draw_set_halign(fa_center);
-		draw_text(room_width/2, 50, "Your robot ");
+		draw_text(room_width/2, 50, "Your robot collapsed after gathering " + string(playerRobot.totalMoney) + " $");
 		draw_set_halign(fa_left);
 		if(!gameEnds){
 			gameEnds = true;

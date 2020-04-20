@@ -108,6 +108,7 @@ flash = 0;
 
 // Shop Var
 money = 100;
+totalMoney = 0;
 
 // Consumables
 overclocked = 0;
