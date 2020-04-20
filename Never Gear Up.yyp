@@ -402,7 +402,7 @@
             "Key": "46b7f831-72ac-421e-91ca-183cdcd21781",
             "Value": {
                 "id": "f4130fd8-f59c-4001-9150-84439a92a699",
-                "resourcePath": "sounds\\sndWorkshop\\sndWorkshop.yy",
+                "resourcePath": "sounds\\sndWorkshop0\\sndWorkshop0.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -1123,6 +1123,14 @@
             "Value": {
                 "id": "b99f20a9-3ad1-4cd1-9c7e-c20323a9e3a5",
                 "resourcePath": "sounds\\Damage2\\Damage2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f78dd87e-86dd-4e63-96d7-fbddc96e4c1d",
+            "Value": {
+                "id": "0046e2d0-7d4c-4f5a-879c-5cc6d9b0b649",
+                "resourcePath": "sounds\\sndWorkshop1\\sndWorkshop1.yy",
                 "resourceType": "GMSound"
             }
         },
