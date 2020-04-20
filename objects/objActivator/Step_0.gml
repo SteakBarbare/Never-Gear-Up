@@ -5,6 +5,6 @@ if(instance_exists(objPj))
 }
 if(instance_exists(objEnemy))
 {
-	var pjRobot = instance_find(objEnemyTemplate, 0).id;
-	pjRobot.activate = true;
+	var pnjRobot = instance_find(objEnemyTemplate, 0).id;
+	pnjRobot.activate = true;
 }
