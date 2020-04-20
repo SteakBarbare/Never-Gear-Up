@@ -81,6 +81,10 @@ robotLifeMax = 100 + robotPart[3, 0]/2 + robotPart[3, 1]/2 + robotPart[3, 2]/2 +
 robotLife = robotLifeMax;
 robotNewLife = robotLife;
 
+speedBonus = 0;
+dodgeBonus = 0;
+damageBonus = 0;
+
 var thisRobot = instance_find(objPj, 0).id;
 
 scrStatsUpdate(thisRobot)
@@ -106,6 +110,6 @@ flash = 0;
 money = 100;
 
 // Consumables
-overclock = 0;
-oilChange = 0;
+overclocked = 0;
 redButton = 0;
+oilRecharge = 0;

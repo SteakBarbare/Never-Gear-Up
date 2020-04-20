@@ -64,3 +64,7 @@ isCritical = false;
 fxGenerated = false;
 flash = 0;
 
+// Consumables Vars
+speedBonus = 0;
+damageBonus = 0;
+dodgeBonus = 0;

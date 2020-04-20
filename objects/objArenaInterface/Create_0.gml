@@ -1,1 +1,4 @@
 ini = true;
+
+gameEnds = false;
+
