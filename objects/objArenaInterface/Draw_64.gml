@@ -7,8 +7,12 @@ if(instance_exists(objPj))
 	if(playerRobot.robotLife <= 0)
 	{
 		draw_set_halign(fa_center);
-		draw_text(room_width/2, 50, "you lose");
+		draw_text(room_width/2, 50, "Your robot ");
 		draw_set_halign(fa_left);
+		if(!gameEnds){
+			gameEnds = true;
+			alarm[3] = room_speed*6;
+		}
 	}
 	else if(playerRobot.win)
 	{
