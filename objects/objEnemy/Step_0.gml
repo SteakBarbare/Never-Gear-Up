@@ -89,7 +89,11 @@ if(activate)
 		}
 	}
 	else
-	{ 
+	{
+		if(bounty > 0){
+			opponentRobot.money += bounty;
+			bounty = 0;
+		}
 		v = 0;
 		image_speed = 1.5;
 		srcSpineChangeAnim(skeleton_animation_get(), "Death");

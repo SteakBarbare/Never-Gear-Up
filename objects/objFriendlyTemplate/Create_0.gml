@@ -101,3 +101,6 @@ isCritical = false;
 // Fx Var
 fxGenerated = false;
 flash = 0;
+
+// Shop Var
+money = 100;

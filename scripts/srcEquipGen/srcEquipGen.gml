@@ -1,4 +1,4 @@
-/// @function          EquipementGen;
+/// @function          srcEquipGen;
 /// @param  {object}   robot			enemy generated
 /// @description generate a random mob
 
@@ -11,7 +11,7 @@ for(compteur = 0; compteur < 6; compteur++)
 {
 	
 	dice = irandom_range(0, 100);
-	
+	robot.bounty += dice;
 	
 	switch(compteur)
 	{
@@ -223,6 +223,12 @@ for(compteur = 0; compteur < 6; compteur++)
 			robot.robotPart[3, compteur] = destroyerMaxLife;
 			break;	
 	}
+	
+}
+
+robot.bounty += irandom_range(-20, 20);
+if(robot.bounty < 50){
+	robot.bounty = 50;
 }
 
 return robot;

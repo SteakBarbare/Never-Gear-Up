@@ -16,3 +16,5 @@ if(!instance_exists(objPj))
 }
 playerRobot = instance_find(objPj, 0).id;
 
+audio_stop_all();
+audio_play_sound(sndWorkshop, 10, true);

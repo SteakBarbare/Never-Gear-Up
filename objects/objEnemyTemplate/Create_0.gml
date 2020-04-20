@@ -37,6 +37,9 @@ animTime = 0;
 combat = false;
 victorySound = false;
 
+// Shop var 
+bounty = 0;
+
 srcEquipGen(robot);
 
 //life calcul
@@ -60,3 +63,4 @@ isCritical = false;
 // Fx Var
 fxGenerated = false;
 flash = 0;
+
