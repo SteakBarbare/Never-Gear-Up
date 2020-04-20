@@ -149,4 +149,5 @@ if(instance_exists(objEnemy))
 
 
 }
-draw_set_font(-1)
+draw_set_font(-1);
+

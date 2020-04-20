@@ -104,3 +104,8 @@ flash = 0;
 
 // Shop Var
 money = 100;
+
+// Consumables
+overclock = 0;
+oilChange = 0;
+redButton = 0;
