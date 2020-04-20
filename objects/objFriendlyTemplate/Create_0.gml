@@ -19,7 +19,7 @@ diceDodge = 0;
 
 activate = false;
 
-xOriginal = x;
+xOriginal = 216;
 
 damage = false;
 
