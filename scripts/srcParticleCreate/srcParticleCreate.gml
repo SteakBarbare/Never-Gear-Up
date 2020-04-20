@@ -23,6 +23,8 @@ if(fxType == "Hit"){
 		impact.image_xscale = image_xscale;
 					
 		objScreenShake.tinyShake = 15;
+		
+		audio_play_sound(asset_get_index("sndImpact" + string(irandom(4))), 15, false);
 	}else{
 		// Create oil and screws particles
 		part_particles_create(global.particlesSys, x, y-irandom(20), global.oilParticle, irandom_range(30, 45));
@@ -39,6 +41,8 @@ if(fxType == "Hit"){
 		impact.image_xscale = image_xscale;
 					
 		objScreenShake.heavyShake = 10;
+		audio_play_sound(asset_get_index("sndImpact" + string(irandom(4))), 15, false);
+		audio_play_sound(asset_get_index("sndExplosion" + string(irandom(3))), 25, false);
 	}
 }else if(fxType == "Block"){
 	//Impact Fx
@@ -48,7 +52,7 @@ if(fxType == "Hit"){
 					
 	fxGenerated = true;
 	objScreenShake.tinyShake = 10;
-	
+	audio_play_sound(asset_get_index("sndBlock" + string(irandom(5))), 15, false);
 }
 
 isBroken = false;

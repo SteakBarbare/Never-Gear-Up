@@ -108,6 +108,8 @@ if(activate)
 						opponentRobot.robotNewLife = opponentRobot.robotLife;
 						robotNewTimer = turnTimer;
 						update = true;
+						
+						audio_play_sound(asset_get_index("sndSlash" + string(irandom(4))), 5, false);
 						var sound = irandom(15);
 						switch(sound)
 						{
