@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "3952df31-e5aa-4a8c-9f9f-c3a1540afe10",
+            "Value": {
+                "id": "fb5efffc-e167-4eff-8b61-11576f92dbd8",
+                "resourcePath": "sprites\\sprConsumablesIcons\\sprConsumablesIcons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3bbbb9c5-1067-4e8c-991b-9288925cf415",
             "Value": {
                 "id": "2390f47f-8c48-485e-a9aa-474fb78c80d5",

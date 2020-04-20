@@ -127,10 +127,37 @@ if(instance_exists(objPj))
 	draw_text_transformed_color(196, 295, int64(playerRobot.robotSpeed), 0.6, 0.6, 0, c, c, c, c, 1);
 	
 	
+	// Consumables Draw & Interaction
 	
+	draw_sprite(sprConsumablesIcons, 0, 350, 230);
+	draw_sprite(sprConsumablesIcons, 1, 350, 262);
+	draw_sprite(sprConsumablesIcons, 2, 350, 294);
 	
+	draw_text(390, 220, "+5 Damage");
+	draw_text(390, 252, "RED GOES FASTA !");
+	draw_text(390, 286, "10% Dodge increase");
 	
+	var clickLeft = mouse_check_button(mb_left);
 	
+	if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 1000, 687, 1100, 811)){
+		if(clickLeft && alarm[0] <= -1 && playerRobot.overclocked > 0){
+			alarm[0] = room_speed / 2;
+			
+		}
+	}else if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 1000, 830, 1100, 900)){
+		if(clickLeft && alarm[1] <= -1 && playerRobot.redButton > 0){
+			alarm[1] = room_speed / 2;
+			
+		}
+	}else if(point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), 1000, 907, 1100, 1020)){
+		if(clickLeft && alarm[0] <= -1 && playerRobot.oilRecharge > 0){
+			alarm[2] = room_speed / 2;
+			
+		}
+	}
+	
+	show_debug_message(window_mouse_get_x());
+	show_debug_message(window_mouse_get_y());
 	
 }
 
