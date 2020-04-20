@@ -53,6 +53,9 @@ isActive = false;
 //Combat Var
 win = false;
 isBroken = false;
+targetedPart = 0;
+damageTaken = 0;
+isCritical = false;
 
 // Fx Var
 fxGenerated = false;

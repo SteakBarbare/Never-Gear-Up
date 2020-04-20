@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "92df93a0-cf22-4ec4-8c70-59d2075502c8",
+            "Value": {
+                "id": "38e3689c-27ab-427c-a7b5-1642fc0c2ea6",
+                "resourcePath": "objects\\objDamageTaken\\objDamageTaken.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "930bbd56-8ad4-437f-9563-b62dbed3f807",
             "Value": {
                 "id": "a9bf358e-a944-4f20-b0a2-100e0530e482",
