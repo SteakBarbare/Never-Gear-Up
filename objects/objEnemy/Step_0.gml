@@ -10,96 +10,106 @@ if(robotName == ""){
 
 
 	robotName = "" + prefix + suffix + " " + nicknamePrefix + " " + nicknameSuffix;
+	robotN = "" + prefix + suffix;
+	robotT = "" + nicknamePrefix + " " + nicknameSuffix;
 }
 
-if(instance_exists(objEnemy))
+if(activate)
 {
-	var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
-	dead = opponentRobot.win;
-}
 
-if(!animationSet)
-{
-	dice = irandom(1);
-	animationSet = true;
-}
-
-
-if(!dead)
-{
-	if(!dash)
+	if(instance_exists(objEnemy))
 	{
-		
-		if(diceDodge <= robotDodge)
+		var opponentRobot = instance_find(objFriendlyTemplate, 0).id;
+		dead = opponentRobot.win;
+	}
+
+	if(!animationSet)
+	{
+		dice = irandom(1);
+		animationSet = true;
+	}
+
+
+	if(!dead)
+	{
+		if(!dash)
 		{
-			
-			image_speed = 1;
-			if(opponentRobot.dash && opponentRobot.image_index > 4)
+		
+			if(diceDodge <= robotDodge)
 			{
-				
-				image_speed = 1;
-				srcSpineChangeAnim(skeleton_animation_get(), "Defense");
 			
+				image_speed = 1;
+				if(opponentRobot.dash && opponentRobot.image_index > 4)
+				{
+				
+					image_speed = 1;
+					srcSpineChangeAnim(skeleton_animation_get(), "Defense");
+			
+				}
+				else
+				{
+					srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+					animationSet = false;
+				}
 			}
 			else
 			{
-				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
-				animationSet = false;
+				image_speed = 1;
+				if(opponentRobot.dash && opponentRobot.image_index > 12)
+				{
+					if(!fxGenerated){
+						srcParticleCreate("Hit");
+					}
+					image_speed = 1.3;
+					srcSpineSetSlots(robotPart);
+					srcSpineChangeAnim(skeleton_animation_get(), "Stagger");	
+				}
+				else
+				{
+					srcSpineChangeAnim(skeleton_animation_get(), "Idle");
+					animationSet = false;
+				}
 			}
+		}
+		else if(dice == 0)
+		{
+			srcSpineChangeAnim(skeleton_animation_get(), "Attack Left");
+			var slashFx = instance_create_depth(x, y, -y, objSlashFx);
+			slashFx.image_xscale = -1;
+			slashFx.sprite_index = sprFxAttackLeft;
+			slashFx.image_index = image_index;
 		}
 		else
 		{
-			image_speed = 1;
-			if(opponentRobot.dash && opponentRobot.image_index > 12)
-			{
-				if(!fxGenerated){
-					srcParticleCreate("Hit");
-				}
-				image_speed = 1.3;
-				srcSpineSetSlots(robotPart);
-				srcSpineChangeAnim(skeleton_animation_get(), "Stagger");	
-			}
-			else
-			{
-				srcSpineChangeAnim(skeleton_animation_get(), "Idle");
-				animationSet = false;
-			}
+			srcSpineChangeAnim(skeleton_animation_get(), "Attack Right");
+			var slashFx = instance_create_depth(x, y, -y, objSlashFx);
+			slashFx.image_xscale = -1;
+			slashFx.sprite_index = sprFxAttackRight;
+			slashFx.image_index = image_index;
 		}
 	}
-	else if(dice == 0)
-	{
-		srcSpineChangeAnim(skeleton_animation_get(), "Attack Left");
-		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
-		slashFx.image_xscale = -1;
-		slashFx.sprite_index = sprFxAttackLeft;
-		slashFx.image_index = image_index;
-	}
 	else
-	{
-		srcSpineChangeAnim(skeleton_animation_get(), "Attack Right");
-		var slashFx = instance_create_depth(x, y, -y, objSlashFx);
-		slashFx.image_xscale = -1;
-		slashFx.sprite_index = sprFxAttackRight;
-		slashFx.image_index = image_index;
+	{ 
+		v = 0;
+		image_speed = 1.5;
+		srcSpineChangeAnim(skeleton_animation_get(), "Death");
+		if(image_index > 34)
+		{
+			image_speed = 0;
+		}
+	}
+
+	if(!opponentRobot.dash){
+		fxGenerated = false;
+	}
+
+	if(skeleton_animation_get() == "Defense"){
+		if(!fxGenerated && image_index > 8){
+			srcParticleCreate("Block");
+		}
 	}
 }
 else
-{ 
-	v = 0;
-	image_speed = 1.5;
-	srcSpineChangeAnim(skeleton_animation_get(), "Death");
-	if(image_index > 34)
-	{
-		image_speed = 0;
-	}
-}
-
-if(!opponentRobot.dash){
-	fxGenerated = false;
-}
-
-if(skeleton_animation_get() == "Defense"){
-	if(!fxGenerated && image_index > 8){
-		srcParticleCreate("Block");
-	}
+{
+	srcSpineChangeAnim(skeleton_animation_get(), "Idle");
 }

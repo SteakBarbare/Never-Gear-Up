@@ -1,9 +1,20 @@
 currentState = 0;
+step = 0;
+
+pickEnnemy = -1;
+
+mOnButton0 = false;
+mOnButton1 = false;
+mOnButton2 = false;
+mOnButton3 = false;
+
+mOnButtonShop = false;
+mOnButtonFight = false;
+
+if(!instance_exists(objPj))
+{
+	instance_create_depth(100, 100, 1, objPj);	
+}
 playerRobot = instance_find(objPj, 0).id;
 
-/*
-ennemyRobot0 = instance_find(objEnemy, 0).id;
-ennemyRobot1 = instance_find(objEnemy, 1).id;
-ennemyRobot2 = instance_find(objEnemy, 2).id;
-ennemyRobot3 = instance_find(objEnemy, 3).id;
-*/
+createEnemy = false;

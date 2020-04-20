@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "309c2b94-7a33-4e7a-b2d7-091c78b41898",
+            "Value": {
+                "id": "0abe3b63-389c-43b6-80fc-b8170d69a6bb",
+                "resourcePath": "views\\309c2b94-7a33-4e7a-b2d7-091c78b41898.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "310d72ce-66b7-4476-8c3e-30419eb940fb",
             "Value": {
                 "id": "2539d88b-c1b7-4bea-8b64-b72020ad811e",
@@ -476,6 +484,14 @@
                 "id": "f616d0a3-08c5-4d90-a6c5-418d38d012aa",
                 "resourcePath": "views\\66951ea9-8b51-4ddf-b975-07dcda6f13cd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "674e0d40-a5c2-4c08-9652-392f0ce46cda",
+            "Value": {
+                "id": "573a3300-4e35-4ec0-a904-a10278bc82b9",
+                "resourcePath": "sprites\\sprWorkshopStatsMenu\\sprWorkshopStatsMenu.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -767,6 +783,14 @@
             }
         },
         {
+            "Key": "badba3fd-333f-4e21-9a3b-f63bb7d13c62",
+            "Value": {
+                "id": "2a0302d1-4ea6-4f88-ac30-737e4e9a546d",
+                "resourcePath": "sprites\\sprEnnemiesInterface\\sprEnnemiesInterface.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd23304f-36d0-444f-ae7a-b23e73ea96bc",
             "Value": {
                 "id": "59efdbf2-ffa6-4623-975d-9cef2198d67a",
@@ -799,11 +823,27 @@
             }
         },
         {
+            "Key": "c4b8effd-b90c-492e-91cf-f7b82894b927",
+            "Value": {
+                "id": "f70bcd43-6d3a-4381-a3e7-f267a900b501",
+                "resourcePath": "sprites\\sprRedButton\\sprRedButton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c4ce1e7e-78ea-43e5-8764-0d8d14dae84f",
             "Value": {
                 "id": "a6c5f8f0-9361-4ffd-b374-5be54e38f737",
                 "resourcePath": "scripts\\srcEquipGen\\srcEquipGen.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c5717a82-1e3c-40f5-9cbd-09ad48327f57",
+            "Value": {
+                "id": "a6250db9-5e80-404c-9b27-91a86875dd63",
+                "resourcePath": "sprites\\sprWorkshopStatsButtonShop\\sprWorkshopStatsButtonShop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -855,6 +895,14 @@
             }
         },
         {
+            "Key": "d4680d6c-6bd4-4041-a702-fc42cddaff21",
+            "Value": {
+                "id": "26841919-d328-4c52-b893-1ef5c75b3876",
+                "resourcePath": "sprites\\sprChooseOneButton\\sprChooseOneButton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d93bf709-44f5-41e2-91df-9b1388d0571c",
             "Value": {
                 "id": "2e9d5bb6-c718-496e-9cba-f0ae52784488",
@@ -884,6 +932,14 @@
                 "id": "dc42e9a4-01df-4618-a450-82c59551c896",
                 "resourcePath": "sounds\\sndBlock2\\sndBlock2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e1c5c16f-7a04-4b52-97d6-d084ec093857",
+            "Value": {
+                "id": "f63c64eb-8b77-47c3-8f52-ea42fa3782c4",
+                "resourcePath": "sprites\\sprEnnemyButton\\sprEnnemyButton.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -956,6 +1012,14 @@
                 "id": "86ecc108-dee2-4a33-9e1d-cd2e5db81430",
                 "resourcePath": "scripts\\srcSpineChangeAttachment\\srcSpineChangeAttachment.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f3d98aae-9715-4815-8a86-103a63c61cc3",
+            "Value": {
+                "id": "948af1fe-26fb-451e-94da-8d9ef592af64",
+                "resourcePath": "sprites\\sprBackgroundWorkshop\\sprBackgroundWorkshop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
