@@ -9,7 +9,7 @@ dead = false;
 
 persistent = true;
 
-
+achat = false;
 
 
 

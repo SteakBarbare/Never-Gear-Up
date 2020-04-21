@@ -209,6 +209,7 @@ if(achat)
 				thisRobot.robotPart[0, 0] = shopParts[2, selected];
 				thisRobot.robotPart[1, 0] = shopParts[5, selected];
 				thisRobot.robotPart[2, 0] = shopParts[3, selected];
+				achat = false;
 				show_debug_message(thisRobot.robotPart[1, 0])
 			}
 			break;
@@ -220,6 +221,7 @@ if(achat)
 				thisRobot.robotPart[0, 1] = shopParts[2, selected+3];
 				thisRobot.robotPart[1, 1] = shopParts[5, selected+3];
 				thisRobot.robotPart[2, 1] = shopParts[3, selected+3];
+				achat = false;
 			}
 			break;
 			
@@ -230,6 +232,7 @@ if(achat)
 				thisRobot.robotPart[0, 3] = shopParts[2, selected+6];
 				thisRobot.robotPart[1, 3] = shopParts[5, selected+6];
 				thisRobot.robotPart[2, 3] = shopParts[3, selected+6];
+				achat = false;
 			}
 			break;
 			
@@ -240,6 +243,7 @@ if(achat)
 				thisRobot.robotPart[0, 5] = shopParts[2, selected+9];
 				thisRobot.robotPart[1, 5] = shopParts[5, selected+9];
 				thisRobot.robotPart[2, 5] = shopParts[3, selected+9];
+				achat = false;
 			}
 			break;
 			
@@ -250,6 +254,7 @@ if(achat)
 				thisRobot.robotPart[0, 3] = shopParts[2, selected+6];
 				thisRobot.robotPart[1, 3] = shopParts[5, selected+6];
 				thisRobot.robotPart[2, 3] = shopParts[3, selected+6];
+				achat = false;
 			}
 			break;
 			
@@ -260,11 +265,14 @@ if(achat)
 				thisRobot.robotPart[0, 3] = shopParts[2, selected+9];
 				thisRobot.robotPart[1, 3] = shopParts[5, selected+9];
 				thisRobot.robotPart[2, 3] = shopParts[3, selected+9];
+				achat = false;
+				
 			}
 			break;
 			
 			
 	}
+	thisRobot.achat = true;
 }
 
 draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 0.5);

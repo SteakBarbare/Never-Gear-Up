@@ -95,3 +95,10 @@ if(activate)
 		}
 	}
 }
+if(achat)
+{
+	srcSpineSetSlots();
+	scrStatsUpdate(id);
+	robotLifeMax = 100 + robotPart[3, 0]/2 + robotPart[3, 1]/2 + robotPart[3, 2]/2 + robotPart[3, 3]/2 + robotPart[3, 4]/2 + robotPart[3, 5]/2;
+	achat = false;
+}

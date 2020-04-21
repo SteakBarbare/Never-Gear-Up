@@ -170,3 +170,9 @@ if(activate)
 	depth = -y;
 }
 
+if(achat)
+{
+	srcSpineSetSlots(robotPart);
+	scrStatsUpdate(id);
+	achat = false;
+}
