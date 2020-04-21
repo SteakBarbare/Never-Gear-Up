@@ -42,7 +42,7 @@ victorySound = false;
 
 //Life Parts --- 0 = life
 robotPart[0, 0] = 50; // Head
-robotPart[0, 1] = 1000; // Body
+robotPart[0, 1] = 100; // Body
 robotPart[0, 2] = 50; // rightArm
 robotPart[0, 3] = 50; // leftArm
 robotPart[0, 4] = 50; // rightLeg
