@@ -7,7 +7,7 @@ if(instance_exists(objPj))
 	if(playerRobot.robotLife <= 0)
 	{
 		draw_set_halign(fa_center);
-		draw_text(room_width/2, 50, "Your robot ");
+		draw_text(room_width/2, 50, "Your robot collapsed after gathering " + string(playerRobot.totalMoney) + " $");
 		draw_set_halign(fa_left);
 		if(!gameEnds){
 			gameEnds = true;
@@ -136,6 +136,11 @@ if(instance_exists(objPj))
 	draw_sprite(sprConsumablesIcons, 0, 350, 230);
 	draw_sprite(sprConsumablesIcons, 1, 350, 262);
 	draw_sprite(sprConsumablesIcons, 2, 350, 294);
+	
+	draw_text(350, 230, playerRobot.overclocked);
+	draw_text(350, 262, playerRobot.redButton);
+	draw_text(350, 294, playerRobot.oilRecharge);
+	
 	
 	draw_text(390, 220, "+5 Damage");
 	draw_text(390, 252, "RED GOES FASTA !");
