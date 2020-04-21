@@ -59,4 +59,3 @@ switch(part)
 			break;
 }
 
-robot.robotLifeMax = 100 + robot.robotPart[3, 0]/2 + robot.robotPart[3, 1]/2 + robot.robotPart[3, 2]/2 + robot.robotPart[3, 3]/2 + robot.robotPart[3, 4]/2 + robot.robotPart[3, 5]/2;

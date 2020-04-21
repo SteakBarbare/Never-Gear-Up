@@ -1,5 +1,6 @@
 var clickLeft = mouse_check_button(mb_left);
 var thisRobot = instance_find(objPj, 0).id;
+var robot = thisRobot;
 
 draw_self();
 
@@ -69,6 +70,7 @@ switch(image_index)
 		draw_text_transformed_color(326, 101, shopParts[2, 0], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 0], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(492, 101, shopParts[4, 0], 0.7, 0.7, 0, c, c, c, c, 1);
+		show_debug_message("head")
 		
 		//Defaut
 		draw_text_transformed_color(326, 158, shopParts[2, 1], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -84,6 +86,9 @@ switch(image_index)
 		break;
 		
 	case 2:
+	
+		show_debug_message("body")
+		
 		//Junk
 		draw_text_transformed_color(326, 101, shopParts[2, 3], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 3], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -103,6 +108,8 @@ switch(image_index)
 		break;
 		
 	case 3:
+		show_debug_message("LA")
+		
 		//Junk
 		draw_text_transformed_color(326, 101, shopParts[2, 6], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 6], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -122,6 +129,8 @@ switch(image_index)
 		break;
 		
 	case 4:
+		show_debug_message("LL")
+		
 		//Junk
 		draw_text_transformed_color(326, 101, shopParts[2, 9], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 9], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -141,6 +150,8 @@ switch(image_index)
 		break;
 		
 	case 5:
+		show_debug_message("RA")
+		
 		//Junk
 		draw_text_transformed_color(326, 101, shopParts[2, 6], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 6], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -160,6 +171,7 @@ switch(image_index)
 		break;
 		
 	case 6:
+	show_debug_message("RL")
 		//Junk
 		draw_text_transformed_color(326, 101, shopParts[2, 9], 0.7, 0.7, 0, c, c, c, c, 1);
 		draw_text_transformed_color(410, 101, shopParts[3, 9], 0.7, 0.7, 0, c, c, c, c, 1);
@@ -229,9 +241,9 @@ if(achat)
 			if(thisRobot.money >= shopParts[4, selected])
 			{
 				thisRobot.money -= shopParts[4, selected];
-				thisRobot.robotPart[0, 3] = shopParts[2, selected+6];
-				thisRobot.robotPart[1, 3] = shopParts[5, selected+6];
-				thisRobot.robotPart[2, 3] = shopParts[3, selected+6];
+				thisRobot.robotPart[0, 2] = shopParts[2, selected+6];
+				thisRobot.robotPart[1, 2] = shopParts[5, selected+6];
+				thisRobot.robotPart[2, 2] = shopParts[3, selected+6];
 				achat = false;
 			}
 			break;
@@ -240,9 +252,9 @@ if(achat)
 			if(thisRobot.money >= shopParts[4, selected])
 			{
 				thisRobot.money -= shopParts[4, selected];
-				thisRobot.robotPart[0, 5] = shopParts[2, selected+9];
-				thisRobot.robotPart[1, 5] = shopParts[5, selected+9];
-				thisRobot.robotPart[2, 5] = shopParts[3, selected+9];
+				thisRobot.robotPart[0, 4] = shopParts[2, selected+9];
+				thisRobot.robotPart[1, 4] = shopParts[5, selected+9];
+				thisRobot.robotPart[2, 4] = shopParts[3, selected+9];
 				achat = false;
 			}
 			break;
@@ -262,9 +274,9 @@ if(achat)
 			if(thisRobot.money >= shopParts[4, selected])
 			{
 				thisRobot.money -= shopParts[4, selected];
-				thisRobot.robotPart[0, 3] = shopParts[2, selected+9];
-				thisRobot.robotPart[1, 3] = shopParts[5, selected+9];
-				thisRobot.robotPart[2, 3] = shopParts[3, selected+9];
+				thisRobot.robotPart[0, 5] = shopParts[2, selected+9];
+				thisRobot.robotPart[1, 5] = shopParts[5, selected+9];
+				thisRobot.robotPart[2, 5] = shopParts[3, selected+9];
 				achat = false;
 				
 			}
@@ -273,6 +285,8 @@ if(achat)
 			
 	}
 	thisRobot.achat = true;
+	robot.robotLife = 100 + robot.robotPart[3, 0]/2 + robot.robotPart[3, 1]/2 + robot.robotPart[3, 2]/2 + robot.robotPart[3, 3]/2 + robot.robotPart[3, 4]/2 + robot.robotPart[3, 5]/2;
+	robot.robotLifeMax = 100 + robot.robotPart[3, 0]/2 + robot.robotPart[3, 1]/2 + robot.robotPart[3, 2]/2 + robot.robotPart[3, 3]/2 + robot.robotPart[3, 4]/2 + robot.robotPart[3, 5]/2;
 }
 
 draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 0.5);

@@ -41,12 +41,12 @@ combat = false;
 victorySound = false;
 
 //Life Parts --- 0 = life
-robotPart[0, 0] = 20; // Head
-robotPart[0, 1] = 40; // Body
-robotPart[0, 2] = 30; // rightArm
-robotPart[0, 3] = 30; // leftArm
-robotPart[0, 4] = 30; // rightLeg
-robotPart[0, 5] = 30; // leftLeg
+robotPart[0, 0] = 50; // Head
+robotPart[0, 1] = 1000; // Body
+robotPart[0, 2] = 50; // rightArm
+robotPart[0, 3] = 50; // leftArm
+robotPart[0, 4] = 50; // rightLeg
+robotPart[0, 5] = 50; // leftLeg
 
 //Parts --- 1 = part
 
@@ -67,12 +67,12 @@ robotPart[2, 4] = 2; // rightLeg
 robotPart[2, 5] = 2; // leftLeg
 
 //Life Parts --- 3 = Max Life
-robotPart[3, 0] = 20; // Head
-robotPart[3, 1] = 40; // Body
-robotPart[3, 2] = 30; // rightArm
-robotPart[3, 3] = 30; // leftArm
-robotPart[3, 4] = 30; // rightLeg
-robotPart[3, 5] = 30; // leftLeg
+robotPart[3, 0] = 50; // Head
+robotPart[3, 1] = 100; // Body
+robotPart[3, 2] = 50; // rightArm
+robotPart[3, 3] = 50; // leftArm
+robotPart[3, 4] = 50; // rightLeg
+robotPart[3, 5] = 50; // leftLeg
 
 
 
@@ -107,7 +107,7 @@ fxGenerated = false;
 flash = 0;
 
 // Shop Var
-money = 100;
+money = 1000;
 
 // Consumables
 overclocked = 0;
