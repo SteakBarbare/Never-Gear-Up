@@ -111,6 +111,6 @@ money = 100;
 totalMoney = 0;
 
 // Consumables
-overclocked = 0;
-redButton = 0;
-oilRecharge = 0;
+overclocked = 5;
+redButton = 5;
+oilRecharge = 5;

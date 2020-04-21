@@ -137,6 +137,11 @@ if(instance_exists(objPj))
 	draw_sprite(sprConsumablesIcons, 1, 350, 262);
 	draw_sprite(sprConsumablesIcons, 2, 350, 294);
 	
+	draw_text(350, 230, playerRobot.overclocked);
+	draw_text(350, 262, playerRobot.redButton);
+	draw_text(350, 294, playerRobot.oilRecharge);
+	
+	
 	draw_text(390, 220, "+5 Damage");
 	draw_text(390, 252, "RED GOES FASTA !");
 	draw_text(390, 286, "10% Dodge increase");
